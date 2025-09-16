@@ -9,7 +9,7 @@ interface Props {
 const { label, type } = Astro.props;
 
 // Styles
-const defaultStyle = "inline-block rounded-full py-4 px-6 text-base uppercase";
+const defaultStyle = "cta cursor-pointer inline-block rounded-full py-4 px-6 text-base uppercase";
 const primaryStyle = "bg-fg-primary text-white";
 const secondaryStyle = "bg-white text-black";
 const isPrimary = type === 'primary';
@@ -18,5 +18,7 @@ const isPrimary = type === 'primary';
 <button
   class={`${defaultStyle} ${isPrimary ? primaryStyle : secondaryStyle}`}
 >
-  {label}
+  <span class="label">
+    {label}
+  </span>
 </button>
