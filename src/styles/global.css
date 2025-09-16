@@ -1,5 +1,31 @@
+@import "./fonts.css";
+
+/*
+  https://tailwindcss.com/blog/tailwindcss-v4#css-first-configuration
+  https://tailwindcss.com/docs/theme
+  https://docs.astro.build/en/guides/fonts/#register-fonts-in-tailwind
+*/
 @import "tailwindcss";
 
-body {
-    color: blue;
+:root {
+  --color-black: oklch(0.269 0 0);
+  --color-gray-dark: oklch(0.439 0 0);
+  --color-gray-soft: oklch(0.862 0 0 / 0.29);
 }
+
+@theme {
+  --font-primary: "GeneralSans-Variable", "sans-serif";
+  --font-secondary: "Playfair Display", serif;
+
+  --color-fg-primary: var(--color-black);
+  --color-fg-secondary: var(--color-gray-dark);
+  --color-fg-soft: var(--color-gray-soft);
+}
+
+/*
+  https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
+
+  @utility {
+    .example { ... }
+  }
+*/

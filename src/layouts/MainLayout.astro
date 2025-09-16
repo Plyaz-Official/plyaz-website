@@ -1,5 +1,9 @@
 ---
 import "../styles/global.css";
+
+const { pageTitle } = Astro.props;
+
+const siteTitle = pageTitle ? `Plyaz | ${pageTitle}` : 'Plyaz';
 ---
 
 <html lang="en">
@@ -8,9 +12,9 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{siteTitle}</title>
 	</head>
-	<body>
+	<body class="text-fg-primary">
 		<slot />
 	</body>
 </html>

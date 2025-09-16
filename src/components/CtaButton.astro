@@ -1,0 +1,22 @@
+---
+// Type declarations
+interface Props {
+  label: string;
+  type: "primary" | "secondary";
+}
+
+// Props
+const { label, type } = Astro.props;
+
+// Styles
+const defaultStyle = "inline-block rounded-full py-4 px-6 text-base uppercase";
+const primaryStyle = "bg-fg-primary text-white";
+const secondaryStyle = "bg-white text-black";
+const isPrimary = type === 'primary';
+---
+
+<button
+  class={`${defaultStyle} ${isPrimary ? primaryStyle : secondaryStyle}`}
+>
+  {label}
+</button>

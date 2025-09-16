@@ -1,8 +1,12 @@
 ---
-import MainLayout from "../layouts/main.astro";
+import HeaderMenu from "../components/HeaderMenu/index.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+const pageTitle = "Home";
 ---
 
-<MainLayout>
+<MainLayout pageTitle={pageTitle}>
+	<HeaderMenu />
 	<h1>Hello, World!</h1>
 </MainLayout>
 
