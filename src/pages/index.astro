@@ -2,6 +2,7 @@
 import HeaderMenu from "../components/HeaderMenu/index.astro";
 import HeroSection from "../components/HeroSection/index.astro";
 import QuoteBox from "../components/QuoteBox/index.astro";
+import Ticket from "../components/Ticket/index.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import { texts } from '../config';
 
@@ -12,5 +13,6 @@ const pageTitle = "Home";
 	<HeaderMenu />
 	<HeroSection />
 	<QuoteBox description={texts.home.engageQuote} />
+	<Ticket />
 </MainLayout>
 
