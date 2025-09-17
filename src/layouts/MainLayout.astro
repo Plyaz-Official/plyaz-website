@@ -15,6 +15,8 @@ const siteTitle = pageTitle ? `Plyaz | ${pageTitle}` : 'Plyaz';
 		<title>{siteTitle}</title>
 	</head>
 	<body class="text-fg-primary">
-		<slot />
+		<div data-name="wrapper" class="w-full max-w-[1350px] m-auto">
+			<slot />
+		</div>
 	</body>
 </html>
