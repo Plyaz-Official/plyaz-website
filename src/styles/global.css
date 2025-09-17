@@ -21,9 +21,6 @@
   --color-fg-primary: var(--color-black);
   --color-fg-secondary: var(--color-gray-dark);
   --color-fg-soft: var(--color-gray-soft);
-
-  --text-primary: 11.938rem;
-  --text-secondary: 12.625rem;
 }
 
 /*
