@@ -21,6 +21,7 @@
   --color-fg-primary: var(--color-black);
   --color-fg-secondary: var(--color-gray-dark);
   --color-fg-soft: var(--color-gray-soft);
+  --color-bg-line: rgba(0, 0, 0, 0.08);
 }
 
 /*
@@ -46,5 +47,45 @@
   .label {
     z-index: 10;
     position: relative;
+  }
+}
+
+@utility vertical-psuedo-border {
+  &::before, &::after {
+    content: " ";
+    background: var(--color-bg-line);
+    width: 1px;
+    height: 100%;
+    display: inline-block;
+    top: 0;
+    position: absolute;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+@utility horizontal-psuedo-border {
+  &::before, &::after {
+    content: " ";
+    background: var(--color-bg-line);
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
   }
 }

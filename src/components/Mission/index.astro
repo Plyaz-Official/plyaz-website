@@ -1,31 +1,23 @@
 ---
-
+import Card from './card.astro';
 ---
-<div class="w-full max-w-[1200px] m-auto grid-container grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] my-20">
-  <div class="w-[25rem] h-[25rem]">
-    <h2 class="pt-5 pl-10">
-      <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2">Company</span>
-      <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl">Mission</span>
-    </h2>
+<div class="w-full xl:w-[75rem] md:w-[50rem] m-auto my-20 grid-container grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
+  <div class="relative w-[25rem] h-[25rem]">
+    <Card type="main" topTitle='company' bottomTitle='mission' />
   </div>
-  <div class="relative flex flex-col items-end w-[25rem] h-[25rem] border-[0.8px] border-neutral-300">
-    <p class="text-4xl font-medium text-fg-secondary pt-8 pl-10">Breaking down the walls between athletes and fans. Forever. 
-    </p>
-    <p class="self-end font-secondary italic text-[12.65rem] tracking-[-0.74rem] text-neutral-300 opacity-30 leading-[0.92] pb-5 pr-6">01</p>
+  <div class="relative w-[25rem] h-[25rem] ">
+    <Card type="child" topTitle='Breaking down the walls between athletes and fans. Forever.' bottomTitle='01' />
   </div>
-  <div class="relative flex flex-col items-end w-[25rem] h-[25rem] border-neutral-300 border-[0.8px]">
-    <p class="text-4xl font-medium text-fg-secondary pt-8 pl-10">Where passion meets opportunity, and dedication gets rewarded.
-    </p>
-    <p class="self-end font-secondary italic text-[12.65rem] tracking-[-0.74rem] text-neutral-300 opacity-30 leading-[0.92] pb-5 pr-5">02</p>
+  <div class="relative w-[25rem] h-[25rem]">
+    <Card type="child" topTitle='Where passion meets opportunity, and dedication gets rewarded.' bottomTitle='02' />
   </div>
-  <div class="relative flex flex-col items-end w-[25rem] h-[25rem] border-[0.8px] border-neutral-300">
-    <p class="text-4xl font-medium text-fg-secondary pt-8 pl-10">No more watching from the sidelines; become part of their journey.
-    </p>
-    <p class="absolute pt-[10.62rem] font-secondary italic text-[12.65rem] tracking-[-0.74rem] text-neutral-300 opacity-30 leading-[0.92] pb-5 pr-5">03</p>
+  <div class="relative w-[25rem] h-[25rem] ">
+    <Card type="child" topTitle='No more watching from the sidelines; become part of their journey.' bottomTitle='03' />
   </div>
-  <div class="relative flex flex-col items-end w-[25rem] h-[25rem] border-[0.8px] border-neutral-300">
-    <p class="text-4xl font-medium text-fg-secondary pt-8 pl-10">Your support becomes their success, and their success becomes yours.
-    </p>
-    <p class="absolute pt-[10.62rem] font-secondary italic text-[12.65rem] tracking-[-0.74rem] text-neutral-300 opacity-30 leading-[0.92] pb-5 pr-5">04</p>
+  <div class="relative w-[25rem] h-[25rem] ">
+    <Card type="child" topTitle='Your support becomes their success, and their success becomes yours.' bottomTitle='04' />
+  </div>
+  <div class="relative w-[25rem] h-[25rem] ">
+    <Card type="empty" topTitle='' bottomTitle='' />
   </div>
 </div>
