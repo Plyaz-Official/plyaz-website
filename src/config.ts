@@ -37,6 +37,18 @@ export const texts = {
         topTitle: "The Sports World's Best-Kept Secret",
         bottomTitle: 'Plyaz ecosystem',
         description: 'Join industry pros and super fans to discover how careers are built in sports. Connect with key players where passion meets opportunity.',
+      }, {
+        topTitle: 'Your Talent Deserves Recognition',
+        bottomTitle: 'Athlete tokenization',
+        description: 'Turn your athletic talent into unique fan experiences. Let scouts and clubs vie for your attention while you build your authentic personal brand and get rewarded for your dedication.',
+      }, {
+        topTitle: 'Level Up Your Fan Status',
+        bottomTitle: 'Fan engagement',
+        description: 'Take on challenges to show your super fan status. Unlock exclusive content and connect with athletes - Be part of their journey and celebrations.',
+      }, {
+        topTitle: 'Fantasy Powered by Real Relationships',
+        bottomTitle: 'Fantasy sports',
+        description: 'Create your fantasy team with athletes you support. Your passion boosts their performance. Join leagues where fandom meets strategy.',
       }],
     },
   }

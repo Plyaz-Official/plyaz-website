@@ -38,13 +38,15 @@ const isChildExtended = type === 'child' && extended;
   )}
 
   { isMainExtended && (
-  <div class="pt-5 pl-10">
-    <h2 class="pb-4">
-      <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2 capitalize">{topTitle}</span>
-      <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl capitalize block">{bottomTitle}</span>
-    </h2>
-    <p>{description}</p>
-    <CtaButton type="primary" label={ctaLabel || ''} />
+  <div class="flex flex-col justify-between h-full p-10">
+    <div>
+      <h2 class="pb-4">
+        <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl capitalize">{topTitle}</span>
+        <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2 capitalize block">{bottomTitle}</span>
+      </h2>
+      <p class="pb-6.5rem">{description}</p>
+    </div>
+    <CtaButton className="self-end" type="primary" label={ctaLabel || ''} />
   </div>
   )}
 
@@ -56,10 +58,10 @@ const isChildExtended = type === 'child' && extended;
   )}
 
   { isChildExtended && (
-    <div>
-      <span class="">{topTitle}</span>
-      <h3 class="">{bottomTitle}</h3>
-      <p>{description}</p>
+    <div class="p-10">
+      <span class="text-xs font-semibold uppercase text-neutral-500 pb-2">{topTitle}</span>
+      <h3 class="text-2xl font-semibold pb-4">{bottomTitle}</h3>
+      <p class="text-lg">{description}</p>
     </div>
   )}
 
