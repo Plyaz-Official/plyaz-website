@@ -1,0 +1,47 @@
+---
+interface Props {
+  type: "main" | "child" | "empty";
+  topTitle: string;
+  bottomTitle: string;
+  bodyContent: string;
+  className?: string;
+}
+
+const { type, topTitle, bottomTitle, bodyContent, className } = Astro.props;
+---
+
+<div class={`relative w-full h-full ${className || ''}`}>
+  {
+    type === 'main'
+    ? (
+      <div class="flex flex-col pt-5 pl-10">
+        <h2 class="">
+          <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl capitalize">{topTitle}</span>
+          <span class="block font-semibold text-6xl tracking-[-0.1rem] pr-2 capitalize">{bottomTitle}</span>
+        </h2>
+        <p class="text-lg">{bodyContent}</p>
+      </div>
+    )
+    : (
+      <div class="flex flex-col">
+        <p class="text-xs font-medium text-neutral-500 pt-8 pl-10">{topTitle}</p>
+        <p class="text-2xl font-semibold ">{bottomTitle}</p>
+        <p class="text-lg">{bodyContent}</p>
+      </div>
+    )
+  }
+
+  <div data-name="pseudo-dots-box" class="absolute top-0 left-0 w-full h-full">
+    <div class="dot absolute top-[-.3rem] left-[-.3rem]"></div>
+    <div class="dot absolute top-[-.3rem] right-[-.3rem]"></div>
+    <div class="dot absolute bottom-[-.3rem] left-[-.3rem]"></div>
+    <div class="dot absolute bottom-[-.3rem] right-[-.3rem]"></div>
+  </div>
+
+  <div data-name="pseudo-border-box" class="absolute top-0 left-0 w-[calc(100%+1px)] h-[calc(100%+1px)] z-[-1]">
+    <div class="absolute w-full h-full vertical-psuedo-border">
+    </div>
+    <div class="absolute w-full h-full horizontal-psuedo-border">
+    </div>
+  </div>
+</div>

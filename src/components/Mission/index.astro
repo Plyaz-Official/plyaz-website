@@ -1,23 +1,31 @@
 ---
+import { number } from 'astro:schema';
 import Card from './card.astro';
+
+interface Props {
+  doubleCard?: boolean;
+}
+
+const { doubleCard } = Astro.props;
 ---
-<div class="w-full xl:w-[75rem] md:w-[50rem] m-auto my-20 grid-container grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
-  <div class="relative w-[25rem] h-[25rem]">
+
+<div class="w-full xl:w-[75rem] md:w-[50rem] m-auto my-20 grid-container grid xl:[grid-template-columns:repeat(3,25rem)] xl:[grid-template-rows:repeat(3,25rem)]">
+  <div class={`relative ${doubleCard && 'col-span-2' || ''}`}>
     <Card type="main" topTitle='company' bottomTitle='mission' />
   </div>
-  <div class="relative w-[25rem] h-[25rem] ">
+  <div class="relative">
     <Card type="child" topTitle='Breaking down the walls between athletes and fans. Forever.' bottomTitle='01' />
   </div>
-  <div class="relative w-[25rem] h-[25rem]">
+  <div class="relative">
     <Card type="child" topTitle='Where passion meets opportunity, and dedication gets rewarded.' bottomTitle='02' />
   </div>
-  <div class="relative w-[25rem] h-[25rem] ">
+  <div class="relative">
     <Card type="child" topTitle='No more watching from the sidelines; become part of their journey.' bottomTitle='03' />
   </div>
-  <div class="relative w-[25rem] h-[25rem] ">
+  <div class="relative">
     <Card type="child" topTitle='Your support becomes their success, and their success becomes yours.' bottomTitle='04' />
   </div>
-  <div class="relative w-[25rem] h-[25rem] ">
+  <div class="relative">
     <Card type="empty" topTitle='' bottomTitle='' />
   </div>
 </div>

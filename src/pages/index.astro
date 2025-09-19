@@ -1,6 +1,7 @@
 ---
 import HeroSection from "../components/HeroSection/index.astro";
 import QuoteBox from "../components/QuoteBox/index.astro";
+import Feature from "../components/Feature/index.astro";
 import Ticket from "../components/Ticket/index.astro";
 import Mission from "../components/Mission/index.astro";
 import Partners from "../components/Partners/index.astro";
@@ -14,6 +15,7 @@ const pageTitle = "Home";
 <MainLayout pageTitle={pageTitle}>
 	<HeroSection />
 	<QuoteBox description={texts.home.engageQuote} />
+	<Feature />
 	<Ticket />
 	<Mission />
 	<Partners />
