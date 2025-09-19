@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import HeaderMenu from "../components/HeaderMenu/index.astro";
+import Footer from "../components/Footer/index.astro";
 
 const { pageTitle } = Astro.props;
 
@@ -16,7 +18,9 @@ const siteTitle = pageTitle ? `Plyaz | ${pageTitle}` : 'Plyaz';
 	</head>
 	<body class="text-fg-primary font-primary">
 		<div data-name="wrapper" class="w-full max-w-[1350px] m-auto">
+			<HeaderMenu />
 			<slot />
 		</div>
+		<Footer />
 	</body>
 </html>
