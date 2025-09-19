@@ -1,9 +1,8 @@
 ---
 import HeroSection from "../components/HeroSection/index.astro";
 import QuoteBox from "../components/QuoteBox/index.astro";
-import Feature from "../components/Feature/index.astro";
 import Ticket from "../components/Ticket/index.astro";
-import Mission from "../components/Mission/index.astro";
+import CardGrid from "../components/CardGrid/index.astro";
 import Partners from "../components/Partners/index.astro";
 import JoinUs from "../components/JoinBox/index.astro";
 import MainLayout from "../layouts/MainLayout.astro";
@@ -15,9 +14,9 @@ const pageTitle = "Home";
 <MainLayout pageTitle={pageTitle}>
 	<HeroSection />
 	<QuoteBox description={texts.home.engageQuote} />
-	<Feature />
+	<CardGrid extended={true} items={texts.home.cardContents.revolutionItems} />
 	<Ticket />
-	<Mission />
+	<CardGrid extended={false} items={texts.home.cardContents.missionItems} />
 	<Partners />
 	<JoinUs />
 </MainLayout>
