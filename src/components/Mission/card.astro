@@ -9,7 +9,7 @@ interface Props {
 const { type, topTitle, bottomTitle, className } = Astro.props;
 ---
 
-<div class={className}>
+<div class={`relative w-full h-full ${className || ''}`}>
   {
     type === 'main'
     ? (
@@ -26,8 +26,17 @@ const { type, topTitle, bottomTitle, className } = Astro.props;
     )
   }
 
-  <div data-name="pseudo-border-box" class="absolute top-0 left-0 w-[calc(100%+1px)] h-[calc(100%+1px)] -z-1">
-    <div class="absolute w-full h-full vertical-psuedo-border"></div>
-    <div class="absolute w-full h-full horizontal-psuedo-border"></div>
+  <div data-name="pseudo-dots-box" class="absolute top-0 left-0 w-full h-full">
+    <div class="dot absolute top-[-.3rem] left-[-.3rem]"></div>
+    <div class="dot absolute top-[-.3rem] right-[-.3rem]"></div>
+    <div class="dot absolute bottom-[-.3rem] left-[-.3rem]"></div>
+    <div class="dot absolute bottom-[-.3rem] right-[-.3rem]"></div>
+  </div>
+
+  <div data-name="pseudo-border-box" class="absolute top-0 left-0 w-[calc(100%+1px)] h-[calc(100%+1px)] z-[-1]">
+    <div class="absolute w-full h-full vertical-psuedo-border">
+    </div>
+    <div class="absolute w-full h-full horizontal-psuedo-border">
+    </div>
   </div>
 </div>

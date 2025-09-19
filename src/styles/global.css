@@ -11,6 +11,7 @@
   --color-black: oklch(0.269 0 0);
   --color-gray-dark: oklch(0.439 0 0);
   --color-gray-soft: oklch(0.862 0 0 / 0.29);
+  --color-gray-subtle: oklch(0.8699 0 0);
   --gradient-orange: linear-gradient(109deg, #FFA132 4.99%, #FF4D00 92.05%);
 }
 
@@ -21,7 +22,7 @@
   --color-fg-primary: var(--color-black);
   --color-fg-secondary: var(--color-gray-dark);
   --color-fg-soft: var(--color-gray-soft);
-  --color-bg-line: rgba(0, 0, 0, 0.08);
+  --color-bg-line: var(--color-gray-subtle);
 }
 
 /*
@@ -88,4 +89,12 @@
   &::after {
     bottom: 0;
   }
+}
+
+@utility dot {
+  height: .6rem;
+  width: .6rem;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--color-bg-line);
 }
