@@ -16,10 +16,10 @@ interface Props {
 const { extended, items } = Astro.props;
 ---
 
-<div class="w-full xl:w-[75rem] md:w-[50rem] m-auto my-20 grid-container grid xl:[grid-template-columns:repeat(3,25rem)] xl:[grid-template-rows:repeat(3,25rem)]">
+<div class="w-full xl:w-[75rem] md:w-[50rem] m-auto my-20 grid-container grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center">
   {
     items.map((item, index) => (
-      <div class={`relative ${index === 0 && extended ? 'col-span-2' : ''}`}>
+      <div class={`relative ${index === 0 && extended ? 'md:col-span-2 col-span-1 md:w-[50rem] w-[25rem] h-[25rem]' : 'w-[25rem] h-[25rem]'}`}>
         <Card
           type={index === 0 ? 'main' : 'child'}
           topTitle={item.topTitle}
