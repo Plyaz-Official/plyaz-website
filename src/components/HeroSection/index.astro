@@ -2,7 +2,7 @@
 import heroImg from './basketball-player.png';
 ---
 
-<div class="h-auto m-auto relative main-header-poster">
+<div class="m-auto relative main-header-poster">
   <!-- Start: title -->
   <div class="title">
     <div class="font-secondary italic uppercase font-semibold text-left leading-[0.86]">Discover</div>
@@ -11,8 +11,8 @@ import heroImg from './basketball-player.png';
   <!-- End: title -->
 
   <!-- Start: poster -->
-  <div data-name="poster" class="flex justify-center relative top-[-11rem]">
-    <img src={heroImg.src} alt="" class="w-full h-auto max-w-[42rem] relative left-[-5rem]">
+  <div data-name="poster" class="flex justify-center relative poster-position">
+    <img src={heroImg.src} alt="" class="w-full h-auto relative left-auto max-w-none">
   </div>
   <!-- End: poster -->
 </div>

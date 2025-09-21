@@ -54,6 +54,7 @@
 @utility main-header-poster {
   width: calc(100vw * .805);
   max-width: 1350px;
+  height: min(calc(100vw * 1), 102rem);
 
   .title {
     &:nth-child(1) {
@@ -66,6 +67,13 @@
       letter-spacing: -0.016ch;
     }
   }
+}
+
+@utility poster-position {
+  top: max(calc((100vw * .125) * -1), -12rem);
+  width: clamp(0px, calc(100vw * .5), 50rem);
+  left: calc(50% - min(calc(100vw * .04), 4rem));
+  transform: translateX(-50%);
 }
 
 
