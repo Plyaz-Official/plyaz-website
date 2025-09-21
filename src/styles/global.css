@@ -51,6 +51,24 @@
   }
 }
 
+@utility main-header-poster {
+  width: calc(100vw * .805);
+  max-width: 1350px;
+
+  .title {
+    &:nth-child(1) {
+      font-size: clamp(1rem, calc(100vw * 0.12), 12.6rem);
+      letter-spacing: -0.1ch;
+    }
+
+    &:nth-child(2) {
+      font-size: clamp(1rem, calc(100vw * 0.112), 11.5rem);
+      letter-spacing: -0.016ch;
+    }
+  }
+}
+
+
 @utility vertical-psuedo-border {
   &::before, &::after {
     content: " ";
