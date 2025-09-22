@@ -1,5 +1,20 @@
 ---
 import heroImg from './basketball-player.png';
+import Card from '../CardGrid/card.astro';
+
+type Item = {
+  topTitle: string;
+  bottomTitle: string;
+  description: string;
+  ctaLabel?: string;
+}
+
+interface Props {
+  extended: boolean;
+  items: Item[];
+}
+
+const { extended, items } = Astro.props;
 ---
 
 <div class="m-auto relative main-header-poster">
@@ -15,6 +30,24 @@ import heroImg from './basketball-player.png';
     <img src={heroImg.src} alt="" class="w-full h-auto relative left-auto max-w-none">
   </div>
   <!-- End: poster -->
+  
+  <!-- Start: grid -->
+  <div class="w-full xl:w-[75rem] md:w-[50rem] m-auto mt-10 grid-container grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 poster-background">
+    {
+      items.map((item, index) => (
+        <div class={`relative ${index === 0 && extended ? 'md:col-span-2 col-span-1 md:w-[50rem] w-[25rem] h-[25rem]' : 'w-[25rem] h-[25rem]'}`}>
+          <Card
+            type={index === 0 ? 'main' : 'child'}
+            topTitle={item.topTitle}
+            bottomTitle={item.bottomTitle}
+            description={item.description}
+            extended={extended}
+            ctaLabel={index === 0 ? item.ctaLabel : ''}
+          />
+        </div>
+      ))
+    }
+  </div>
+  <!-- End: grid -->
 </div>
-
 

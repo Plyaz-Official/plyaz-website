@@ -71,11 +71,18 @@
 
 @utility poster-position {
   top: max(calc((100vw * .125) * -1), -12rem);
-  width: clamp(0px, calc(100vw * .5), 50rem);
-  left: calc(50% - min(calc(100vw * .04), 4rem));
+  width: clamp(0px, calc(100vw * .5), 43rem);
+  left: calc(50% - min(calc(100vw * .04), 5rem));
   transform: translateX(-50%);
 }
 
+@utility poster-background {
+  position: absolute;
+  top: min(calc(100vw * .20), 21rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+} 
 
 @utility vertical-psuedo-border {
   &::before, &::after {

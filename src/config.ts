@@ -51,5 +51,45 @@ export const texts = {
         description: 'Create your fantasy team with athletes you support. Your passion boosts their performance. Join leagues where fandom meets strategy.',
       }],
     },
+
+    heroBackground: {
+      emptyItems: [{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },{
+        topTitle: '',
+        bottomTitle: '',
+        description: '',
+      },]
+    } ,
   }
 };

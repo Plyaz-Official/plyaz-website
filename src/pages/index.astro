@@ -12,7 +12,7 @@ const pageTitle = "Home";
 ---
 
 <MainLayout pageTitle={pageTitle}>
-	<HeroSection />
+	<HeroSection extended={false} items={texts.home.heroBackground.emptyItems} />
 	<QuoteBox description={texts.home.engageQuote} />
 	<CardGrid extended={true} items={texts.home.cardContents.revolutionItems} />
 	<Ticket />
