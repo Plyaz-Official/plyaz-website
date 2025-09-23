@@ -5,8 +5,8 @@ import iconX from "./icon-x.svg";
 import iconCut from "./icon-cut.svg";
 import qrcode from "./sample-qr.jpg";
 ---
-<div class="w-full max-w-[1200px] m-auto h-auto bg-fg-primary grid grid-cols-[8fr_4fr] divide-x-1 divide-dashed divide-neutral-200/50 my-20 relative">
-  <div class="relative flex items-end p-10 pt-8">
+<div class="w-full max-w-[1200px] m-auto h-auto bg-fg-primary grid md:grid-cols-[8fr_1px_4fr] grid-cols-1 my-20 relative">
+  <div data-name="column-a" class="relative flex items-end p-10 pt-8 order-3 md:order-1">
     <div class="h-auto flex flex-col">
       <h2 class="pb-4">
         <span class="font-secondary font-semibold text-6xl italic text-white tracking-[-0.14rem]">Empowering</span>
@@ -19,11 +19,11 @@ import qrcode from "./sample-qr.jpg";
         className="self-start"
       />
     </div>
-    <div class="inline-block absolute bottom-[20px] right-[-13px] ">
-      <img class="" src={iconCut.src} alt="icon scissors">
-    </div>
   </div>
-  <div class="relative flex items-end p-10 pt-8 justify-center">
+  <div data-name="column-b" class="inline-block relative h-[1px] md:w-[1px] w-full md:h-full border-dashed border-neutral-200/50 border-b-[1px] md:border-l-[1px]  order-2">
+    <img class="absolute left-5 bottom-[-10px] rotate-90 md:rotate-none md:bottom-5 md:left-[-10px] w-[20px] max-w-none max-h-none" src={iconCut.src} alt="icon scissors">
+  </div>
+  <div data-name="column-c" class="relative flex items-end p-10 pt-8 justify-center order-1 md:order-3">
     <div class="text-center">
       <img class="mb-9 h-10" src={logo.src} alt="Plyaz">
       <div class="flex-col text-center">
