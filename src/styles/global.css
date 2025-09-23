@@ -78,7 +78,7 @@
 
 @utility poster-background {
   position: absolute;
-  top: min(calc(100vw * .20), 21rem);
+  top: min(calc(100vw * .22), 23rem);
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
