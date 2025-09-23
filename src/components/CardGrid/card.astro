@@ -1,14 +1,22 @@
 ---
 import CtaButton from '../CtaButton.astro';
+import handWrittenLogo from './handwritten-logo.png';
 
-interface Props {
-  type: "main" | "child" | "empty";
-  topTitle: string;
-  bottomTitle: string;
+export type Label = {
+  value: string;
+  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+}
+
+export interface Props {
+  type: "main" | "child" | "signature";
+  topTitle?: string;
+  bottomTitle?: string;
   className?: string;
-  description: string;
-  extended: boolean;
+  description?: string;
+  extended?: boolean;
   ctaLabel?: string;
+  showSignature?: boolean;
+  label?: Label;
 }
 
 const {
@@ -19,12 +27,15 @@ const {
   description,
   extended,
   ctaLabel,
+  showSignature,
+  label
 } = Astro.props;
 
 const isMainDefault = type === 'main' && !extended;
 const isMainExtended = type === 'main' && extended;
 const isChild = type === 'child' && !extended;
 const isChildExtended = type === 'child' && extended;
+const isSignature = type === 'signature';
 ---
 
 <div class={`relative w-full h-full ${className || ''}`}>
@@ -62,6 +73,40 @@ const isChildExtended = type === 'child' && extended;
       <span class="text-xs font-semibold uppercase text-neutral-500 pb-2">{topTitle}</span>
       <h3 class="text-2xl font-semibold pb-4">{bottomTitle}</h3>
       <p class="text-lg">{description}</p>
+    </div>
+  )}
+
+  { isSignature && (
+    <div data-name="signature" class="relative w-full h-full">
+      {
+        showSignature && (
+          <img class="p-24" src={handWrittenLogo.src} alt="hand written logo" class="h-auto">
+        )
+      }
+
+      {
+        !showSignature && label?.position === 'top-left' && (
+          <span class="absolute top-2 left-4 font-primary text-xs uppercase text-neutral-400">{label?.value}</span>
+        )
+      }
+
+      {
+        !showSignature && label?.position === 'top-right' && (
+          <span class="absolute top-2 right-4 font-primary text-xs uppercase text-neutral-400">{label?.value}</span>
+        )
+      }
+
+      {
+        !showSignature && label?.position === 'bottom-left' && (
+          <span class="absolute bottom-[14px] left-[24px] -rotate-90 origin-bottom-left font-primary text-xs uppercase text-neutral-400">{label?.value}</span>
+        )
+      }
+
+      {
+        !showSignature && label?.position === 'bottom-right' && (
+          <span class="absolute bottom-2 right-4 font-primary text-xs uppercase text-neutral-400">{label?.value}</span>
+        )
+      }
     </div>
   )}
 

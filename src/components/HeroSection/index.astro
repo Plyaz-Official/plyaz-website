@@ -1,13 +1,7 @@
 ---
 import heroImg from './basketball-player.png';
-import Card from '../CardGrid/card.astro';
-
-type Item = {
-  topTitle: string;
-  bottomTitle: string;
-  description: string;
-  ctaLabel?: string;
-}
+import CardGrid from '../CardGrid/index.astro';
+import type { Props as Item } from '../CardGrid/card.astro';
 
 interface Props {
   extended: boolean;
@@ -27,26 +21,23 @@ const { extended, items } = Astro.props;
 
   <!-- Start: poster -->
   <div data-name="poster" class="flex justify-center relative poster-position">
-    <img src={heroImg.src} alt="" class="w-full h-auto relative left-auto max-w-none">
+    <img src={heroImg.src} alt="athlete image" class="w-full h-auto relative left-auto max-w-none">
   </div>
   <!-- End: poster -->
   
   <!-- Start: grid -->
-  <div class="w-full xl:w-[75rem] md:w-[50rem] m-auto mt-10 grid-container grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 poster-background">
-    {
-      items.map((item, index) => (
-        <div class={`relative ${index === 0 && extended ? 'md:col-span-2 col-span-1 md:w-[50rem] w-[25rem] h-[25rem]' : 'w-[25rem] h-[25rem]'}`}>
-          <Card
-            type={index === 0 ? 'main' : 'child'}
-            topTitle={item.topTitle}
-            bottomTitle={item.bottomTitle}
-            description={item.description}
-            extended={extended}
-            ctaLabel={index === 0 ? item.ctaLabel : ''}
-          />
-        </div>
-      ))
-    }
+  <div class="poster-background">
+    <CardGrid
+      extended={false}
+      items={items}
+      className='xl:grid hidden'
+    />
+
+    <CardGrid
+      extended={false}
+      items={items.slice(5, 9)}
+      className='hidden lg:grid xl:hidden'
+    />
   </div>
   <!-- End: grid -->
 </div>

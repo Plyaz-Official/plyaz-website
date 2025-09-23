@@ -84,6 +84,13 @@
   z-index: -1;
 } 
 
+@utility poster-logo {
+  position: absolute;
+  top:min(calc(100vw * .43),78rem);
+  left: 80%;
+  transform: translateX(-50%);
+}
+
 @utility vertical-psuedo-border {
   &::before, &::after {
     content: " ";
