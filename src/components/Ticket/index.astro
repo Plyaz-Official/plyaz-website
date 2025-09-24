@@ -5,14 +5,14 @@ import iconX from "./icon-x.svg";
 import iconCut from "./icon-cut.svg";
 import qrcode from "./sample-qr.jpg";
 ---
-<div class="w-full max-w-[1200px] m-auto h-auto bg-fg-primary grid md:grid-cols-[8fr_1px_4fr] grid-cols-1 my-20 relative">
+<div class="w-full max-w-[1200px] m-auto h-auto bg-secondary grid md:grid-cols-[8fr_1px_4fr] grid-cols-1 my-20 relative">
   <div data-name="column-a" class="relative flex items-end p-10 pt-8 order-3 md:order-1">
     <div class="h-auto flex flex-col">
       <h2 class="pb-4">
-        <span class="font-secondary font-semibold text-6xl italic text-white tracking-[-0.14rem]">Empowering</span>
-        <span class="block font-semibold text-6xl text-white tracking-[-0.1rem]">All participants in sports</span>
+        <span class="font-secondary font-semibold text-6xl italic text-foreground tracking-[-0.14rem]">Empowering</span>
+        <span class="block font-semibold text-6xl text-foreground tracking-[-0.1rem]">All participants in sports</span>
       </h2>
-      <p class="text-lg text-neutral-200/80 pb-12 font-light">Join an innovative platform that connects athletes, fans, scouts, agents, and clubs in a unique digital ecosystem. Experience the future of sports networking and unlock new opportunities!</p>
+      <p class="text-lg text-foreground/70 pb-12 font-light">Join an innovative platform that connects athletes, fans, scouts, agents, and clubs in a unique digital ecosystem. Experience the future of sports networking and unlock new opportunities!</p>
       <CtaButton
         label="JOIN THE COMMUNITY"
         type="secondary"
@@ -20,16 +20,16 @@ import qrcode from "./sample-qr.jpg";
       />
     </div>
   </div>
-  <div data-name="column-b" class="inline-block relative h-[1px] md:w-[1px] w-full md:h-full border-dashed border-neutral-200/50 border-b-[1px] md:border-l-[1px]  order-2">
+  <div data-name="column-b" class="inline-block relative h-[1px] md:w-[1px] w-full md:h-full border-dashed border-border-subtle/50 border-b-[1px] md:border-l-[1px]  order-2">
     <img class="absolute left-5 bottom-[-10px] rotate-90 md:rotate-none md:bottom-5 md:left-[-10px] w-[20px] max-w-none max-h-none" src={iconCut.src} alt="icon scissors">
   </div>
   <div data-name="column-c" class="relative flex items-end p-10 pt-8 justify-center order-1 md:order-3">
     <div class="text-center">
       <img class="mb-9 h-10" src={logo.src} alt="Plyaz">
       <div class="flex-col text-center">
-        <p class="text-xs font-medium text-white uppercase mb-[-6px]">NEW ERA OF SPORTS</p>
+        <p class="text-xs font-medium text-foreground uppercase mb-[-6px]">NEW ERA OF SPORTS</p>
         <img class="inline w-3 h-3" src={iconX.src} alt="icon x">
-        <p class="text-xs font-medium text-white uppercase mt-[-2px]">Empowering athletes</p>
+        <p class="text-xs font-medium text-foreground uppercase mt-[-2px]">Empowering athletes</p>
       </div>
       <img class="inline h-[10rem] mt-8" src={qrcode.src} alt="QR code">
     </div>

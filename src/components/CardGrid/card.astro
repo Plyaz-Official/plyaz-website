@@ -63,14 +63,14 @@ const isSignature = type === 'signature';
 
   { isChild && (
     <div class="flex flex-col">
-      <p class="text-4xl font-medium text-fg-secondary pt-8 pl-10">{topTitle}</p>
-      <p class="absolute bottom-4 right-0 font-secondary italic text-[12.65rem] tracking-[-0.74rem] text-neutral-300 opacity-30 leading-[0.92] pb-5 pr-6">{bottomTitle}</p>
+      <p class="text-4xl font-medium text-secondary-foreground pt-8 pl-10">{topTitle}</p>
+      <p class="absolute bottom-4 right-0 font-secondary italic text-[12.65rem] tracking-[-0.74rem] text-accent-foreground/20 leading-[0.92] pb-5 pr-6">{bottomTitle}</p>
     </div>
   )}
 
   { isChildExtended && (
     <div class="p-10">
-      <span class="text-xs font-semibold uppercase text-neutral-500 pb-2">{topTitle}</span>
+      <span class="text-xs font-semibold uppercase text-tertiary-foreground pb-2">{topTitle}</span>
       <h3 class="text-2xl font-semibold pb-4">{bottomTitle}</h3>
       <p class="text-lg">{description}</p>
     </div>
@@ -86,25 +86,25 @@ const isSignature = type === 'signature';
 
       {
         !showSignature && label?.position === 'top-left' && (
-          <span class="absolute top-2 left-4 font-primary text-xs uppercase text-neutral-400">{label?.value}</span>
+          <span class="absolute top-2 left-4 font-primary text-xs uppercase text-accent-foreground">{label?.value}</span>
         )
       }
 
       {
         !showSignature && label?.position === 'top-right' && (
-          <span class="absolute top-2 right-4 font-primary text-xs uppercase text-neutral-400">{label?.value}</span>
+          <span class="absolute top-2 right-4 font-primary text-xs uppercase text-accent-foreground">{label?.value}</span>
         )
       }
 
       {
         !showSignature && label?.position === 'bottom-left' && (
-          <span class="absolute bottom-[14px] left-[24px] -rotate-90 origin-bottom-left font-primary text-xs uppercase text-neutral-400">{label?.value}</span>
+          <span class="absolute bottom-[14px] left-[24px] -rotate-90 origin-bottom-left font-primary text-xs uppercase text-accent-foreground">{label?.value}</span>
         )
       }
 
       {
         !showSignature && label?.position === 'bottom-right' && (
-          <span class="absolute bottom-2 right-4 font-primary text-xs uppercase text-neutral-400">{label?.value}</span>
+          <span class="absolute bottom-2 right-4 font-primary text-xs uppercase text-accent-foreground">{label?.value}</span>
         )
       }
     </div>
