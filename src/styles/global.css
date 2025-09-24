@@ -8,21 +8,34 @@
 @import "tailwindcss";
 
 :root {
-  --color-black: oklch(0.269 0 0);
-  --color-gray-dark: oklch(0.439 0 0);
-  --color-gray-soft: oklch(0.862 0 0 / 0.29);
-  --color-gray-subtle: oklch(0.8699 0 0);
+  --color-white: #FFF; 
+  --color-neutral-800: oklch(0.269 0 0);
+  --color-neutral-600: oklch(0.439 0 0);
+  --color-neutral-500: oklch(0.5555 0 0);
+  --color-neutral-400: oklch(0.7155 0 0);
+  --color-neutral-300: oklch(0.8699 0 0);
+  --color-neutral-100: oklch(0.9702 0 0);
   --gradient-orange: linear-gradient(109deg, #FFA132 4.99%, #FF4D00 92.05%);
 }
 
 @theme {
+  /* Font */
   --font-primary: "GeneralSans-Variable", "sans-serif";
   --font-secondary: "Playfair Display", serif;
-
-  --color-fg-primary: var(--color-black);
-  --color-fg-secondary: var(--color-gray-dark);
-  --color-fg-soft: var(--color-gray-soft);
-  --color-bg-line: var(--color-gray-subtle);
+  /* Background */
+  --color-background: var(--color-white);
+  --color-primary: var(--color-neutral-100);
+  --color-secondary: var(--color-neutral-800);
+  --color-tertiary: var(--color-neutral-400);
+  --color-interactive: var(var(--gradient-orange));
+  /* Text */
+  --color-foreground: var(--color-white);
+  --color-primary-foreground: var(--color-neutral-800);
+  --color-secondary-foreground: var(--color-neutral-600);
+  --color-tertiary-foreground: var(--color-neutral-500);
+  --color-accent-foreground:var(--color-neutral-400);
+  /* Border */
+  --color-border-subtle: var(--color-neutral-300);
 }
 
 /*
@@ -87,7 +100,7 @@
 @utility vertical-psuedo-border {
   &::before, &::after {
     content: " ";
-    background: var(--color-bg-line);
+    background: var(--color-border-subtle);
     width: 1px;
     height: 100%;
     display: inline-block;
@@ -107,7 +120,7 @@
 @utility horizontal-psuedo-border {
   &::before, &::after {
     content: " ";
-    background: var(--color-bg-line);
+    background: var(--color-border-subtle);
     width: 100%;
     height: 1px;
     display: inline-block;
@@ -129,7 +142,7 @@
   width: .6rem;
   border-radius: 50%;
   display: inline-block;
-  background-color: var(--color-bg-line);
+  background-color: var(--color-border-subtle);
 }
 
 @utility gradient-block {
