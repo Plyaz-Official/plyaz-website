@@ -34,6 +34,7 @@
   --color-secondary-foreground: var(--color-neutral-600);
   --color-tertiary-foreground: var(--color-neutral-500);
   --color-accent-foreground:var(--color-neutral-400);
+  --color-link-foreground: var(--gradient-orange);
   /* Border */
   --color-border-subtle: var(--color-neutral-300);
 }
@@ -161,4 +162,13 @@
     height: 13rem;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.50) 45.64%, #FFF 100%);;
   }
+}
+
+@utility link-foreground {
+  color: var(--color-white);
+  background-image: var(--gradient-orange);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
