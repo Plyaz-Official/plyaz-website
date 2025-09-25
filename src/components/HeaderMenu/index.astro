@@ -27,7 +27,7 @@ import CtaButton from '../CtaButton.astro';
       <CtaButton
         type="ghost"
         label="contact"
-        pathname="mailto:info@plyaz.com"
+        pathname="mailto:help@plyaz.co.uk"
       />
     </li>
     <li>
@@ -37,8 +37,13 @@ import CtaButton from '../CtaButton.astro';
         pathname="#trigger-login-popup"
       />
     </li>
-    <li>
-      <CtaButton label="Join Us" type="primary" />
+    <li class="flex">
+      <CtaButton 
+        label="Join Us" 
+        type="primary" 
+        pathname="https://plyaz.gitbook.io/plyaz"
+        newWindow={true}
+      />
     </li>
   </ul>
 </nav>

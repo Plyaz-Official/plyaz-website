@@ -17,6 +17,8 @@ export interface Props {
   ctaLabel?: string;
   showSignature?: boolean;
   label?: Label;
+  pathname?: string;
+  newWindow?: boolean;
 }
 
 const {
@@ -28,7 +30,9 @@ const {
   extended,
   ctaLabel,
   showSignature,
-  label
+  label,
+  pathname,
+  newWindow,
 } = Astro.props;
 
 const isMainDefault = type === 'main' && !extended;
@@ -57,7 +61,13 @@ const isSignature = type === 'signature';
       </h2>
       <p class="pb-6.5rem">{description}</p>
     </div>
-    <CtaButton className="self-end" type="primary" label={ctaLabel || ''} />
+    <CtaButton 
+      className="self-end" 
+      type="primary"  
+      label={ctaLabel || ''} 
+      pathname={pathname || ''}
+      newWindow={true || false}
+    />
   </div>
   )}
 

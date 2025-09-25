@@ -55,6 +55,8 @@ export const texts: Texts = {
         bottomTitle: 'Features',
         description: 'Experience the future of sports investment through our cutting-edge platform.',
         ctaLabel: 'read the doc',
+        pathname: 'https://plyaz.gitbook.io/plyaz',
+        newWindow: true
       }, {
         type: 'child',
         topTitle: "The Sports World's Best-Kept Secret",

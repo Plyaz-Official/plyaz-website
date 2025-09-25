@@ -4,13 +4,14 @@ interface Props {
   label: string;
   type: "primary" | "secondary" | "ghost";
   className?: string;
-  pathname?: string;
+  pathname: string;
+  newWindow?: boolean;
 }
 
 type TypeProp = Props['type'];
 
 // Props
-const { label, type, className, pathname } = Astro.props;
+const { label, type, className, pathname, newWindow } = Astro.props;
 
 // Styles
 const ghostStyle = "cursor-pointer inline-block py-4 px-6 text-base font-medium uppercase rounded-full bg-transparent hover:bg-background hover:text-primary-foreground transition duration-300 ease-in-out";
@@ -27,32 +28,15 @@ function getTypeExtendedStyle(type: TypeProp) {
   } else {
     return ghostStyle; 
   }
-}
+};
 ---
 
-<button
-  data-name="cta"
-  data-pathname={pathname}
+<a
+  href={pathname}
   class={`${isGhost ? ghostStyle : defaultStyle} ${getTypeExtendedStyle(type)} ${className}`}
+  target={newWindow ? '_blank' : ''}
 >
   <span class="label">
     {label}
   </span>
-</button>
-
-<script>
-const buttons = document.querySelectorAll('[data-name="cta"]');
-
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const pathname = button.getAttribute('data-pathname');
-
-    if (!pathname) {
-      console.error('Oops! Missing pathname');
-      return
-    };
-
-    window.location.href = pathname;
-  });
-});
-</script>
+</a>
