@@ -1,0 +1,27 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import LegalDocument from "../components/LegalDocument/index.astro";
+
+const pageTitle = "Cookie policy";
+---
+<MainLayout pageTitle={pageTitle}>
+  <LegalDocument
+    title={{
+      firstLine: 'cookie',
+      secondLine: 'policy'
+    }}
+    lastUpdated="22/06/2025"
+  >
+    <div data-name="item-container">
+      <h2>What are cookies?</h2>
+      <p>Cookies are small text files that are stored on your device when you visit our website. 
+        They help us improve your browsing experience by remembering your preferences, analyzing traffic, and enabling certain functionalities.</p>
+    </div>
+    <div data-name="item-container">
+      <h2>How We Use Cookies/</h2>
+      <p>Cookies are small text files that are stored on your device when you visit our website. 
+        They help us improve your browsing experience by remembering your preferences, analyzing traffic, and enabling certain functionalities.</p>
+    </div>
+  </LegalDocument>
+</MainLayout>
+

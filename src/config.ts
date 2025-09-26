@@ -1,5 +1,6 @@
 import type { Props as Item } from './components/CardGrid/card.astro';
 
+
 type Texts = {
   home: {
     engageQuote: string;
@@ -117,6 +118,6 @@ export const texts: Texts = {
         type: 'signature',
         showSignature: true,
       },]
-    } ,
+    },
   }
 };
