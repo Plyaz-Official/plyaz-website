@@ -34,7 +34,6 @@
   --color-secondary-foreground: var(--color-neutral-600);
   --color-tertiary-foreground: var(--color-neutral-500);
   --color-accent-foreground:var(--color-neutral-400);
-  --color-link-foreground: var(--gradient-orange);
   /* Border */
   --color-border-subtle: var(--color-neutral-300);
 }
@@ -65,6 +64,7 @@
   }
 }
 
+/* Poster - start */
 @utility main-header-poster {
   width: calc(100vw * .805);
   max-width: 1350px;
@@ -97,7 +97,9 @@
   transform: translateX(-50%);
   z-index: -1;
 } 
+/* Poster - End */
 
+/* Card grid - start */
 @utility vertical-psuedo-border {
   &::before, &::after {
     content: " ";
@@ -145,6 +147,7 @@
   display: inline-block;
   background-color: var(--color-border-subtle);
 }
+/* Card grid - End */
 
 @utility gradient-block {
   &::before {
