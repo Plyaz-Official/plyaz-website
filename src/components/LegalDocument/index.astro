@@ -12,7 +12,7 @@ export interface Props {
 const { title, lastUpdated } = Astro.props;
 ---
 
-<div class="w-full h-auto grid grid-cols-[400px_2fr]">
+<div class="w-full h-auto grid xl:grid-cols-[400px_2fr] grid-cols-1">
   <div class="flex flex-col p-10">
     <h2 class="pb-4">
       <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl capitalize">{title.firstLine}</span>
@@ -20,7 +20,7 @@ const { title, lastUpdated } = Astro.props;
     </h2>
     <p class="text-base">{lastUpdated}</p>
   </div>
-  <div data-name="legal-content" class="flex flex-col gap-1 p-10 pb-50">
+  <div data-name="legal-content" class="flex flex-col gap-1 p-10 xl:pb-50 pb-24">
     <slot />
   </div>
 </div>
@@ -48,6 +48,15 @@ const { title, lastUpdated } = Astro.props;
 
     li {
       padding-bottom: 1rem;
+    }
+
+    a:hover {
+      color: var(--color-white);
+      background-image: var(--gradient-orange);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
   }
 </style>
