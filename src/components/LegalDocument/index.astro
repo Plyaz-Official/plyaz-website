@@ -1,7 +1,7 @@
 ---
 export type Title = {
   firstLine: string;
-  secondLine: string;
+  secondLine?: string;
 }
 
 export interface Props {
@@ -11,16 +11,36 @@ export interface Props {
 
 const { title, lastUpdated } = Astro.props;
 ---
-<div class="flex flex-row justify-between">
-  <div class="flex flex-col justify-between h-full p-10">
+
+<div class="w-full h-auto grid grid-cols-[400px_2fr]">
+  <div class="flex flex-col p-10">
     <h2 class="pb-4">
       <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl capitalize">{title.firstLine}</span>
       <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2 capitalize block">{title.secondLine}</span>
     </h2>
     <p class="text-base">{lastUpdated}</p>
   </div>
-  <div class="flex flex-col gap-6 p-10">
+  <div data-name="legal-content" class="flex flex-col gap-1 p-10">
     <slot />
   </div>
 </div>
+
+<style>
+  [data-name="legal-content"] {
+    h2 { 
+      font-size: 1.5rem; 
+      font-weight: 600;
+
+      &:not(:first-child) {
+        padding-top: 1.5rem;
+      }
+    }
+
+    p { font-size: large; }
+
+    ul {
+      font-size: large;
+    }
+  }
+</style>
 
