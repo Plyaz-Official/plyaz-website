@@ -52,7 +52,7 @@ They help us improve your browsing experience by remembering your preferences, a
 
   We may allow third-party services (e.g., Google Analytics, advertising partners) to place cookies on your device. These cookies are subject to their respective privacy policies.
 
-## Types of Cookies We Use
+## Contact Us
 
 If you have questions about our Cookie Policy, please contact us at:
 
