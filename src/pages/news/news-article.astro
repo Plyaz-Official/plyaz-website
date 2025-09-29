@@ -1,14 +1,37 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro"
+import MainLayout from "../../layouts/MainLayout.astro";
+import chevionLeft from "./chevron-left.png";
+import Tag from "../../components/Tag.astro";
+import PostCard from "../../components/PostCard/index.astro";
+import { toAttributeString } from "astro/runtime/server/render/util.js";
 
 const post = {
   title: "Tokenizing Declan Rice’s free-kick masterclass",
   author: "Lucas Lee",
   poster: './foobar.png',
-  tags: ['news', 'football']
+  tags: ['News', 'Football']
 }
 ---
 
 <MainLayout>
-  <h1>{post.title}</h1>
+  <div class="m-auto w-[800px] h-auto flex flex-col gap-10 mt-6 mb-16">
+    <div data-class="return-page" class="flex flex-row gap-2 items-center">
+      <img src={chevionLeft.src} alt="" class="w-5 h-5">
+      <p class="text-base uppercase">Back</p>
+    </div>
+    <div data-name="title-section" class="flex flex-col gap-5">
+      <h1 class="text-6xl font-semibold">{post.title}</h1>
+      <p class="text-lg">By {post.author}</p>
+      <div data-name="tags" class="flex flex-row gap-2">
+        {
+          post.tags.map(value => (
+            <Tag value={value} />
+          ))
+        }
+      </div>
+    </div>
+    <div>
+      <img src="" alt="" class="bg-amber-100 w-full h-auto aspect-16/9">{post.poster}
+    </div>
+  </div>
 </MainLayout>
