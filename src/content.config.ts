@@ -13,4 +13,18 @@ const legal = defineCollection({
   }) 
 });
 
-export const collections = { legal };
+const news = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/news" }),
+  schema: z.object({
+    title: z.string(),
+    author: z.string(),
+    description: z.string(),
+    poster: z.string(),
+    tags: z.array(z.string()).optional(),
+  })
+});
+
+export const collections = {
+  legal,
+  news,
+};

@@ -1,0 +1,105 @@
+---
+import PostCard from '../PostCard/index.astro';
+
+// Mock data
+const items = [
+  {
+    title: 'Home loss',
+    author: 'Michael Smill',
+    description: 'The game on saturday was very challening for the home team',
+    poster: '',
+    tags: ['news', 'football'],
+    pathname: '/news/news-article'
+  },
+  {
+    title: 'Grand final is tomorrow',
+    author: 'John Doe',
+    description: 'Our grand final is happening this next saturday',
+    poster: '',
+    tags: [],
+    pathname: '/news/news-article'
+  },
+  {
+    title: 'BMX competition',
+    author: 'John Doe',
+    description: 'Our grand final is happening this next saturday',
+    poster: '',
+    tags: ['news', 'bmx', 'bikes'],
+    pathname: '/news/news-article'
+  },
+  {
+    title: 'Home loss',
+    author: 'Michael Smill',
+    description: 'The game on saturday was very challening for the home team',
+    poster: '',
+    tags: ['news', 'football'],
+    pathname: '/news/news-article'
+  },
+  {
+    title: 'Grand final is tomorrow',
+    author: 'John Doe',
+    description: 'Our grand final is happening this next saturday',
+    poster: '',
+    tags: [],
+    pathname: '/news/news-article'
+  },
+  {
+    title: 'BMX competition',
+    author: 'John Doe',
+    description: 'Our grand final is happening this next saturday',
+    poster: '',
+    tags: ['news', 'bmx', 'bikes'],
+    pathname: '/news/news-article'
+  },
+  {
+    title: 'Home loss',
+    author: 'Michael Smill',
+    description: 'The game on saturday was very challening for the home team',
+    poster: '',
+    tags: ['news', 'football'],
+    pathname: '/news/news-article'
+  },
+  {
+    title: 'Grand final is tomorrow',
+    author: 'John Doe',
+    description: 'Our grand final is happening this next saturday',
+    poster: '',
+    tags: [],
+    pathname: '/news/news-article'
+  },
+  {
+    title: 'BMX competition',
+    author: 'John Doe',
+    description: 'Our grand final is happening this next saturday',
+    poster: '',
+    tags: ['news', 'bmx', 'bikes'],
+    pathname: '/news/news-article'
+  }
+]
+---
+
+<div class="mx-10 mb-64">
+  <div data-name="blog-header" class="w-full pb-10">
+    <h2>
+      <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2">Our</span>
+      <span class="font-secondary text-6xl font-semibold italic tracking-[-0.14rem] pr-2">latest</span>
+      <span class="font-semibold text-6xl tracking-[-0.1rem">stories</span>
+    </h2>
+    <p class="text-lg mt-2 text-secondary-foreground">Discover the latest trends, insights, and news in sports investment and athlete empowerment.</p>
+  </div>
+  <div data-name="card-grids" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+    {
+      items.map((post) =>
+        <a href={post.pathname}>
+          <PostCard 
+            title={post.title}
+            author={post.author}
+            description={post.description}
+            poster={post.poster}
+            tags={post.tags}
+          />
+        </a>
+      )
+    }
+  </div>
+</div>

@@ -1,0 +1,38 @@
+---
+export interface Props {
+  title: string;
+  author: string;
+  description?: string;
+  poster: string;
+  tags: string[];
+}
+
+const {
+ title,
+ author,
+ description,
+ poster,
+ tags,
+} = Astro.props;
+---
+
+<div data-name="news-card" class="flex flex-col w-full h-auto">
+  <div data-name="poster" class="w-full h-auto aspect-16/9 bg-amber-100">
+    <img src="" alt="">{poster}
+  </div>
+  <div data-name="card-contents" class="h-auto flex flex-col gap-5 mr-4 my-5">
+    <div data-name="news-title" class="flex flex-col gap-5">
+      <h2 class="text-4xl font-semibold">{title}</h2>
+      <p class="text-lg">By {author}</p>
+      <p class="text-lg">{description}</p>
+    </div>
+    <div data-name="tags" class="flex flex-row gap-2">
+      {
+        tags.map(tag => (
+          <div class="text-xs text-secondary-foreground rounded-full border-accent-foreground border px-3 py-2">{tag}</div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
