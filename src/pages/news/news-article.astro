@@ -14,13 +14,13 @@ const post = {
 ---
 
 <MainLayout>
-  <div class="m-auto w-[800px] h-auto flex flex-col gap-10 mt-6 mb-16">
-    <div data-class="return-page" class="flex flex-row gap-2 items-center">
+  <div class="w-full max-w-[800px] h-auto flex flex-col items-left m-auto gap-10 mt-6 mb-16 px-10">
+    <div data-class="return-page" class="flex flex-row gap-2">
       <img src={chevionLeft.src} alt="" class="w-5 h-5">
       <p class="text-base uppercase">Back</p>
     </div>
     <div data-name="title-section" class="flex flex-col gap-5">
-      <h1 class="text-6xl font-semibold">{post.title}</h1>
+      <h1 class="text-4xl xl:text-6xl font-semibold">{post.title}</h1>
       <p class="text-lg">By {post.author}</p>
       <div data-name="tags" class="flex flex-row gap-2">
         {
