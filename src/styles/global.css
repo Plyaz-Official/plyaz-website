@@ -32,7 +32,7 @@
   --color-foreground: var(--color-white);
   --color-primary-foreground: var(--color-neutral-800);
   --color-secondary-foreground: var(--color-neutral-600);
-  --color-tertiary-foreground: var(--color-neutral-500);
+  /*--color-tertiary-foreground: var(--color-neutral-500);*/
   --color-accent-foreground:var(--color-neutral-400);
   /* Border */
   --color-border-subtle: var(--color-neutral-300);
