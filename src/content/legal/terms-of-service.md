@@ -26,13 +26,13 @@ All content on the Platform, including text, graphics, logos, and software, is t
 
 You agree to use the Platform lawfully and responsibly. 
 
-- Prohibited activities include:
+Prohibited activities include:
   
-  Violating any applicable laws or regulations.
+Violating any applicable laws or regulations.
 
-  Engaging in fraudulent or malicious behavior.
+Engaging in fraudulent or malicious behavior.
 
-  Attempting to disrupt the functionality or security of the Platform.
+Attempting to disrupt the functionality or security of the Platform.
 
 ## 6. Transactions and Payments
 
