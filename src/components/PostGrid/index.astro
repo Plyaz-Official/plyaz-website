@@ -1,81 +1,14 @@
 ---
 import PostCard from '../PostCard/index.astro';
+import type { CollectionEntry } from 'astro:content';
 
-// Mock data
-const items = [
-  {
-    title: 'Home loss',
-    author: 'Michael Smill',
-    description: 'The game on saturday was very challening for the home team',
-    poster: '',
-    tags: ['news', 'football'],
-    pathname: '/news/news-article'
-  },
-  {
-    title: 'Grand final is tomorrow',
-    author: 'John Doe',
-    description: 'Our grand final is happening this next saturday',
-    poster: '',
-    tags: [],
-    pathname: '/news/news-article'
-  },
-  {
-    title: 'BMX competition',
-    author: 'John Doe',
-    description: 'Our grand final is happening this next saturday',
-    poster: '',
-    tags: ['news', 'bmx', 'bikes'],
-    pathname: '/news/news-article'
-  },
-  {
-    title: 'Home loss',
-    author: 'Michael Smill',
-    description: 'The game on saturday was very challening for the home team',
-    poster: '',
-    tags: ['news', 'football'],
-    pathname: '/news/news-article'
-  },
-  {
-    title: 'Grand final is tomorrow',
-    author: 'John Doe',
-    description: 'Our grand final is happening this next saturday',
-    poster: '',
-    tags: [],
-    pathname: '/news/news-article'
-  },
-  {
-    title: 'BMX competition',
-    author: 'John Doe',
-    description: 'Our grand final is happening this next saturday',
-    poster: '',
-    tags: ['news', 'bmx', 'bikes'],
-    pathname: '/news/news-article'
-  },
-  {
-    title: 'Home loss',
-    author: 'Michael Smill',
-    description: 'The game on saturday was very challening for the home team',
-    poster: '',
-    tags: ['news', 'football'],
-    pathname: '/news/news-article'
-  },
-  {
-    title: 'Grand final is tomorrow',
-    author: 'John Doe',
-    description: 'Our grand final is happening this next saturday',
-    poster: '',
-    tags: [],
-    pathname: '/news/news-article'
-  },
-  {
-    title: 'BMX competition',
-    author: 'John Doe',
-    description: 'Our grand final is happening this next saturday',
-    poster: '',
-    tags: ['news', 'bmx', 'bikes'],
-    pathname: '/news/news-article'
-  }
-]
+type NewsItem = CollectionEntry<'news'>;
+
+interface Props {
+  items: NewsItem[];
+}
+
+const { items } = Astro.props;
 ---
 
 <div class="mx-10 mb-64">
@@ -90,13 +23,13 @@ const items = [
   <div data-name="card-grids" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
     {
       items.map((post) =>
-        <a href={post.pathname}>
+        <a href={`/news/${post.id}`}>
           <PostCard 
-            title={post.title}
-            author={post.author}
-            description={post.description}
-            poster={post.poster}
-            tags={post.tags}
+            title={post.data.title}
+            author={post.data.author}
+            description={post.data.description}
+            poster={post.data.poster}
+            tags={post.data.tags}
           />
         </a>
       )

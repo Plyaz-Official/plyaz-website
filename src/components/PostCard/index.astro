@@ -1,12 +1,14 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 import Tag from "../Tag.astro";
 
 export interface Props {
   title: string;
   author: string;
   description?: string;
-  poster: string;
-  tags: string[];
+  poster: ImageMetadata;
+  tags?: string[];
 }
 
 const {
@@ -20,7 +22,12 @@ const {
 
 <div data-name="news-card" class="flex flex-col w-full h-auto gap-2">
   <div data-name="poster" class="w-full h-auto aspect-16/9 bg-amber-100">
-    <img src="" alt="">{poster}
+    <Image
+      src={poster}
+      alt={title}
+      width={480}
+      quality={80}
+    />
   </div>
   <div data-name="card-contents" class="h-auto flex flex-col gap-4">
     <div data-name="news-title" class="flex flex-col gap-2">
@@ -32,7 +39,9 @@ const {
     </div>
     <div data-name="tags" class="flex flex-row gap-2">
       {
-        tags.map(tag => (
+        Array.isArray(tags)
+        && tags.length > 0
+        && tags.map(tag => (
           <Tag value={tag} />
         ))
       }

@@ -15,13 +15,15 @@ const legal = defineCollection({
 
 const news = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/news" }),
-  schema: z.object({
-    title: z.string(),
-    author: z.string(),
-    description: z.string(),
-    poster: z.string(),
-    tags: z.array(z.string()).optional(),
-  })
+  schema: (args) =>
+    z.object({
+      title: z.string(),
+      author: z.string(),
+      description: z.string(),
+      tags: z.array(z.string()),
+      // https://docs.astro.build/en/guides/images/#images-in-content-collections
+      poster: args.image(),
+    }),
 });
 
 export const collections = {
