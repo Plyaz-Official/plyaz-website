@@ -2,7 +2,7 @@
 title: 'The Dream of Becoming an Athlete: Bridging the Gap Between Aspiration and Reality'
 author: 'iansilva@plyaz.co.uk'
 description: ''
-poster: 'poster.jpg'
+poster: 'poster-1.jpg'
 tags: ['blog', 'about']
 ---
 
