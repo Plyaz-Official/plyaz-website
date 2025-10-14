@@ -21,7 +21,7 @@ const {
 ---
 
 <div data-name="news-card" class="flex flex-col w-full h-auto gap-2">
-  <div data-name="poster" class="w-full h-auto aspect-16/9 bg-amber-100">
+  <div data-name="poster" class="w-full h-auto bg-amber-100">
     <Image
       src={poster}
       alt={title}
@@ -30,7 +30,7 @@ const {
     />
   </div>
   <div data-name="card-contents" class="h-auto flex flex-col gap-4">
-    <div data-name="news-title" class="flex flex-col gap-2">
+    <div data-name="news-title" class="flex flex-col">
       <div class="flex flex-col gap-0">
         <h2 class="text-4xl font-semibold">{title}</h2>
         <p class="text-lg text-accent-foreground">By {author}</p>
