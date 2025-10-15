@@ -3,7 +3,10 @@ import type { Props as Item } from './components/CardGrid/card.astro';
 
 type Texts = {
   home: {
+    quoteBox: {
     engageQuote: string;
+    subHeader: string;
+    }
     cardContents: {
       missionItems: Item[];
       revolutionItems: Item[];
@@ -16,8 +19,10 @@ type Texts = {
 
 export const texts: Texts = {
   home: {
-    engageQuote: 'Engage with a new era of sports investment by tokenizing athletes, joining fantasy leagues, and owning exclusive NFTs. Don’t miss out—join today and elevate your sports experience!',
-
+    quoteBox: {
+    engageQuote: "PLYAZ helps released academy players stay visible, funded, and connected — with support from fans, clubs, and agents.",
+    subHeader: "Starting in English football — built for athletes everywhere.",
+    },  
     cardContents: {
       missionItems: [{
           type: 'main',
