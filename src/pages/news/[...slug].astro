@@ -21,7 +21,7 @@ const { Content } = await render(post);
 <MainLayout>
   <div class="w-full max-w-[800px] h-auto flex flex-col items-left m-auto gap-10 mt-6 mb-16 px-5">
     <a href="/news">
-      <div data-class="return-page" class="flex flex-row gap-2">
+      <div data-class="return-page" class="flex flex-row gap-2 hover:font-medium">
         <img src={chevionLeft.src} alt="chevion left icon" class="w-5 h-5 pt-1">
         <p class="text-base uppercase">Back</p>
       </div>
@@ -29,7 +29,7 @@ const { Content } = await render(post);
     <div data-name="title-section" class="flex flex-col gap-5">
       <div class="flex flex-col gap-1">
         <h1 class="text-4xl xl:text-6xl font-semibold">{post.data.title}</h1>
-        <p class="text-lg text-accent-foreground">By {post.data.author}</p>
+        <p class="text-lg text-accent-foreground">by {post.data.author}</p>
       </div>
       <div data-name="tags" class="flex flex-row gap-2">
         {
@@ -70,6 +70,8 @@ const { Content } = await render(post);
 
     ul {
       font-size: large;
+      padding: 20px;
+      list-style-type: disc;
     }
 
     li {
