@@ -1,6 +1,7 @@
 ---
 import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
+
 import Tag from "../Tag.astro";
 
 export interface Props {
@@ -18,22 +19,17 @@ const {
  poster,
  tags,
 } = Astro.props;
+
+const resizedPosterImage = await getImage({ src: poster, width: 500 });
 ---
 
 <div data-name="news-card" class="flex flex-col w-full h-auto gap-2">
-  <div data-name="poster" class="w-full h-auto bg-amber-100">
-    <Image
-      src={poster}
-      alt={title}
-      width={480}
-      quality={80}
-    />
-  </div>
+  <div data-name="poster" class="w-full h-auto bg-amber-100 bg-cover aspect-video" style={{ backgroundImage: `url(${resizedPosterImage.src})`}}></div>
   <div data-name="card-contents" class="h-auto flex flex-col gap-4">
     <div data-name="news-title" class="flex flex-col">
-      <div class="flex flex-col gap-0">
-        <h2 class="text-4xl font-semibold">{title}</h2>
-        <p class="text-lg text-accent-foreground">By {author}</p>
+      <div class="flex flex-col gap-1">
+        <h2 class="text-3xl font-semibold">{title}</h2>
+        <p class="text-lg text-accent-foreground">by {author}</p>
       </div>  
       <p class="text-lg">{description}</p>
     </div>
