@@ -71,15 +71,8 @@
   height: min(calc(100vw * 1), 102rem);
 
   .title {
-    &:nth-child(1) {
-      font-size: clamp(1rem, calc(100vw * 0.12), 12.6rem);
-      letter-spacing: -0.1ch;
-    }
-
-    &:nth-child(2) {
-      font-size: clamp(1rem, calc(100vw * 0.112), 11.5rem);
-      letter-spacing: -0.016ch;
-    }
+    font-size: clamp(1rem, calc(100vw * 0.101), 10.5rem);
+    letter-spacing: -0.016ch;
   }
 }
 
