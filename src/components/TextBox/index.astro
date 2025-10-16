@@ -1,0 +1,20 @@
+---
+import CtaButton from "../CtaButton.astro";
+import logo from "./logo-trans.png";
+---
+<div class="w-full max-w-[1200px] flex flex-col items-center m-auto my-20">
+  <div class="max-w-[35.25rem] pb-10 text-center">
+    <h2>
+      <span class="font-secondary text-6xl font-semibold italic tracking-[-0.14rem] pr-2">Aligned</span>
+      <span class="font-semibold text-6xl tracking-[-0.1rem]">with the Football Community</span>
+    </h2>
+    <p class="text-lg mt-3 text-center text-secondary-foreground">PLYAZ complements the work of academies, player-care teams, and community trusts — extending support beyond release and keeping players connected to the game.</p>
+  </div>
+  <CtaButton 
+    label="Join us for free";
+    type="primary";
+    pathname="https://community.plyaz.co.uk/"
+    newWindow={true}
+  />
+  <img class="w-[min(68vw,_38rem)] h-auto mt-14" src={logo.src} alt="">
+</div>
