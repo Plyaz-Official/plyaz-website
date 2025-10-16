@@ -66,10 +66,6 @@
 
 /* Poster - start */
 @utility main-header-poster {
-  width: calc(100vw * .805);
-  max-width: 1350px;
-  height: min(calc(100vw * 1), 102rem);
-
   .title {
     font-size: clamp(1rem, calc(100vw * 0.101), 10.5rem);
     letter-spacing: -0.016ch;

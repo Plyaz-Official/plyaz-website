@@ -1,5 +1,5 @@
 ---
-import heroImg from './basketball-player.png';
+import heroImg from './footballer.png';
 import CardGrid from '../CardGrid/index.astro';
 import type { Props as Item } from '../CardGrid/card.astro';
 
@@ -13,8 +13,8 @@ const { extended, items } = Astro.props;
 
 <div class="m-auto relative main-header-poster">
   <!-- Start: title -->
-  <div data-name="hero-title" class="flex flex-col items-center gap-10">
-    <p data-name="sub-header" class="text-lg font-medium text-accent-foreground text-center pb-2">10,000+ players are released each year. PLYAZ keeps their journeys alive.
+  <div data-name="hero-title" class="flex flex-col items-center gap-5">
+    <p data-name="sub-header" class="text-lg font-medium text-accent-foreground text-center">10,000+ players are released each year. PLYAZ keeps their journeys alive.
     </p> 
     <div class="title">
       <div class="font-primary uppercase font-semibold text-center leading-[0.7]">Keep Football</div>
@@ -27,8 +27,8 @@ const { extended, items } = Astro.props;
   <!-- End: title -->
 
   <!-- Start: poster -->
-  <div data-name="poster" class="flex justify-center relative poster-position">
-    <img src={heroImg.src} alt="athlete image" class="w-full h-auto relative left-auto max-w-none">
+  <div data-name="poster" class="text-center py-4 xl:py-0">
+    <img src={heroImg.src} alt="athlete image" class="h-auto relative max-w-[860px] inline-block w-1/2 xl:w-full -left-6 -top-8 md:-left-20 md:-top-11 xl:-left-33 xl:-top-12">
   </div>
   <!-- End: poster -->
   
