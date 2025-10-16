@@ -46,8 +46,8 @@ const isSignature = type === 'signature';
   { isMainDefault && (
     <>
       <h2 class="pt-5 pl-10">
-        <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2 capitalize">{topTitle}</span>
-        <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl capitalize">{bottomTitle}</span>
+        <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2">{topTitle}</span>
+        <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl">{bottomTitle}</span>
       </h2>
     </>
   )}
@@ -56,8 +56,8 @@ const isSignature = type === 'signature';
   <div class="flex flex-col justify-between h-full p-10">
     <div>
       <h2 class="pb-4">
-        <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl capitalize">{topTitle}</span>
-        <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2 capitalize block">{bottomTitle}</span>
+        <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2 block">{topTitle}</span>
+        <span class="font-secondary font-semibold italic tracking-[-0.14rem] text-6xl capitalize">{bottomTitle}</span>
       </h2>
       <p class="pb-6.5rem">{description}</p>
     </div>
@@ -79,12 +79,20 @@ const isSignature = type === 'signature';
   )}
 
   { isChildExtended && (
+    <div class="flex flex-col">
+      <p class="text-4xl font-medium text-secondary-foreground pt-8 pl-10 pr-8">{topTitle}</p>
+      <p class="absolute bottom-4 right-0 font-secondary italic text-[12.65rem] tracking-[-0.74rem] text-accent-foreground/20 leading-[0.92] pb-5 pr-6">{bottomTitle}</p>
+    </div>
+  )}
+
+  <!-- original card system with 2 titles & description
+  { isChildExtended && (
     <div class="p-10">
       <span class="text-xs font-semibold uppercase text-secondary-foreground/70 pb-2">{topTitle}</span>
       <h3 class="text-2xl font-semibold pb-4">{bottomTitle}</h3>
       <p class="text-lg">{description}</p>
     </div>
-  )}
+  )}   -->
 
   { isSignature && (
     <div data-name="signature" class="relative w-full h-full">
