@@ -12,7 +12,7 @@ const { description, subHeader } = Astro.props;
   <div class="text-left px-10 pb-5">
     <img class="inline w-20 h-auto" src={iconQuote.src} alt="quotation icon">
   </div>
-  <div>
+  <div class="flex flex-col items-center">
     <p class="text-2xl xl:text-4xl font-primary text-secondary-foreground/70 font-medium text-center px-16">{description}</p>
     <p class="text-lg font-primary text-accent-foreground font-medium text-center pt-5">{subHeader}</p>
   </div>
