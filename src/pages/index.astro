@@ -4,7 +4,7 @@ import QuoteBox from "../components/QuoteBox/index.astro";
 import Ticket from "../components/Ticket/index.astro";
 import CardGrid from "../components/CardGrid/index.astro";
 import Partners from "../components/Partners/index.astro";
-import JoinUs from "../components/JoinBox/index.astro";
+import TextBox from "../components/TextBox/index.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import { texts } from '../config';
 
@@ -16,7 +16,7 @@ const pageTitle = "Home";
 	<QuoteBox description={texts.home.quoteBox.engageQuote} subHeader={texts.home.quoteBox.subHeader} />
 	<CardGrid extended={true} items={texts.home.cardContents.revolutionItems} />
 	<CardGrid extended={false} items={texts.home.cardContents.missionItems} />
-	<JoinUs />
+	<TextBox />
 	<Ticket />
 	<Partners />
 </MainLayout>
