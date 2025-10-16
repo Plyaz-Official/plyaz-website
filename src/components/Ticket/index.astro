@@ -6,18 +6,27 @@ import iconCut from "./icon-cut.svg";
 import qrcode from "./qr-community.png";
 ---
 <div class="w-full max-w-[1200px] m-auto h-auto bg-secondary grid md:grid-cols-[8fr_1px_4fr] grid-cols-1 my-20 relative">
-  <div data-name="column-a" class="relative flex items-end p-10 pt-8 order-3 md:order-1">
+  <div data-name="column-a" class="relative flex items-end p-10 pt-8 pl-14 order-3 md:order-1">
     <div class="h-auto flex flex-col">
-      <h2 class="pb-4">
-        <span class="font-secondary font-semibold text-6xl italic text-foreground tracking-[-0.14rem]">Empowering</span>
-        <span class="block font-semibold text-6xl text-foreground tracking-[-0.1rem]">All participants in sports</span>
-      </h2>
-      <p class="text-lg text-foreground/70 pb-12 font-light">Join an innovative platform that connects athletes, fans, scouts, agents, and clubs in a unique digital ecosystem. Experience the future of sports networking and unlock new opportunities!</p>
+      <div data-name="titles" class="flex flex-col pb-4">
+        <h2>
+          <span class="block font-semibold text-6xl text-foreground tracking-[-0.1rem]">Be part of</span>
+        </h2>
+        <h2 class="flex flex-row gap-2">
+          <span class="block font-semibold text-6xl text-foreground tracking-[-0.1rem]">the</span>
+          <span class="font-secondary font-semibold text-6xl italic text-foreground tracking-[-0.14rem]">Comeback</span>
+        </h2>
+      </div>
+      <div data-name="description" class="flex flex-col gap-2 pb-12">
+        <p class="text-lg text-foreground/70 font-light">Back real players chasing their second chance. <br>Every contribution supports training, travel, and opportunity.</p>
+        <p class="text-xs font-medium text-accent-foreground">*All player campaigns are verified before launch.</p>
+      </div>
       <CtaButton
-        label="JOIN THE COMMUNITY"
+        label="Back a Player"
         type="secondary"
         className="self-start"
-        pathname="trigger-login-popup"
+        pathname="https://community.plyaz.co.uk/"
+        newWindow={true}
       />
     </div>
   </div>
