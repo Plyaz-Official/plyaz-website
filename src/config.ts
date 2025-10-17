@@ -29,7 +29,7 @@ export const texts: Texts = {
         bottomTitle: 'Spotlight',
         description: 'FA-aligned. Secure. Transparent. Trusted.',
         ctaLabel: 'read the doc',
-        pathname: 'https://plyaz.gitbook.io/plyaz',
+        pathname: 'https://plyaz.gitbook.io/plyaz_25/',
         newWindow: true
       }, {
         type: 'child',
