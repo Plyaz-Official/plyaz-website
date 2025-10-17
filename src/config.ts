@@ -73,14 +73,14 @@ export const texts: Texts = {
       },{
         type: 'signature',
         label: {
-          value: 'empowering athletes',
+          value: 'empowering players',
           position: 'bottom-left',
         },
       },{
         type: 'signature',
         label: {
           value: 'connecting talents',
-          position: 'top-right',
+          position: 'bottom-right',
         },
       },{
         type: 'signature',
