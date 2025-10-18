@@ -1,4 +1,5 @@
 ---
+import logo from './logo-circle.png';
 import { type MenuItem } from '../HeaderMenu/index.astro';
 
 interface Props {
@@ -8,43 +9,48 @@ interface Props {
 const { menuItems } = Astro.props;
 ---
 
-<header class="bg-white shadow-md fixed w-full z-20">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-    <div class="text-xl font-bold">MySite</div>
+<header data-name="mobile" class="rounded-4xl z-20 relative bg-tinted">
+  <div class="mx-auto px-4 py-4 flex items-center justify-between transition duration-300 ease-in-out z-10 relative">
+    <a class="inline-block w-[40px] h-[40px]" href="/">
+      <img class="w-auto" src={logo.src} alt="plyaz logo">
+    </a>
     
     <!-- Hamburger Button -->
-    <div id="menu-btn" class="hamburger flex flex-col justify-between w-8 h-6 cursor-pointer lg:hidden">
-      <span class="block h-1 bg-black"></span>
-      <span class="block h-1 bg-black"></span>
-      <span class="block h-1 bg-black"></span>
+    <div id="menu-btn" class="hamburger flex flex-col justify-between w-8 h-6 m-2 cursor-pointer md:hidden">
+      <span class="block border-1 bg-secondary"></span>
+      <span class="block border-1 bg-secondary"></span>
+      <span class="block border-1 bg-secondary"></span>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="menu" class="hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md lg:hidden">
-    {
-      menuItems.map(item => (
-        <a
-          href={item.pathname}
-          class="text-gray-700 hover:text-blue-500">{item.label}</a>        
-      ))
-    }
+  <div id="menu" class="hidden md:hidden absolute left-0 top-[72px] w-full z-1">
+    <span class="w-full h-20 bg-tinted inline-block absolute z-0 top-[-25px] left-0"></span>
+    <div class="flex flex-col gap-2 px-5 py-5 rounded-br-4xl rounded-bl-4xl bg-tinted shadow-xl relative z-1">
+      {
+        menuItems.map(item => (
+          <a
+            href={item.pathname}
+            class="text-primary-foreground font-primary font-medium  text-base uppercase">{item.label}</a>        
+        ))
+      }
+    </div>
   </div>
 </header>
 
 <style>
   /* Optional: Animate the hamburger icon */
   .hamburger span {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
   .hamburger.open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(12px) rotate(45deg);
   }
   .hamburger.open span:nth-child(2) {
     opacity: 0;
   }
   .hamburger.open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
   }
 </style>
 
