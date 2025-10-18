@@ -69,9 +69,11 @@
 /* Poster - start */
 @utility main-header-poster {
   .title {
-    font-size: clamp(1rem, calc(100vw * 0.101), 10.5rem);
+    font-size: clamp(1rem, calc(100vw * 0.112), 10.5rem);
     letter-spacing: -0.016ch;
   }
+
+  
 }
 
 @utility poster-position {
