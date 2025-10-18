@@ -39,7 +39,7 @@ export const menuItems: MenuItem[] = [{
     </li>
     {
       menuItems.map(menuItem => (
-        <li>
+        <li class="flex">
           <CtaButton
             type={menuItem.type}
             label={menuItem.label}
@@ -51,6 +51,8 @@ export const menuItems: MenuItem[] = [{
   </ul>
 </nav>
 
-<div class="block md:hidden">
-  <MobileMenu menuItems={menuItems} />
+<div class="block md:hidden h-0 mb-20 mt-10">
+  <div class="fixed w-[calc(100%-40px)] z-50 left-1/2 -translate-x-1/2 max-w-128">
+    <MobileMenu menuItems={menuItems} />
+  </div>
 </div>
