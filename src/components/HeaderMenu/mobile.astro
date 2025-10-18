@@ -1,0 +1,67 @@
+---
+import { type MenuItem } from '../HeaderMenu/index.astro';
+
+interface Props {
+  menuItems: MenuItem[];
+}
+
+const { menuItems } = Astro.props;
+---
+
+<header class="bg-white shadow-md fixed w-full z-20">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="text-xl font-bold">MySite</div>
+    
+    <!-- Hamburger Button -->
+    <div id="menu-btn" class="hamburger flex flex-col justify-between w-8 h-6 cursor-pointer lg:hidden">
+      <span class="block h-1 bg-black"></span>
+      <span class="block h-1 bg-black"></span>
+      <span class="block h-1 bg-black"></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="menu" class="hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md lg:hidden">
+    {
+      menuItems.map(item => (
+        <a
+          href={item.pathname}
+          class="text-gray-700 hover:text-blue-500">{item.label}</a>        
+      ))
+    }
+  </div>
+</header>
+
+<style>
+  /* Optional: Animate the hamburger icon */
+  .hamburger span {
+    transition: all 0.3s ease-in-out;
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    if (!btn || !menu) {
+    console.error('Menu items are missing?');
+
+    return;
+    }
+
+    btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('hidden');
+    });
+  })
+</script>

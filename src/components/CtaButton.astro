@@ -1,8 +1,10 @@
 ---
 // Type declarations
+export type CtaButtonTypes = "primary" | "secondary" | "ghost";
+
 interface Props {
   label: string;
-  type: "primary" | "secondary" | "ghost";
+  type: CtaButtonTypes;
   className?: string;
   pathname: string;
   newWindow?: boolean;

@@ -1,42 +1,56 @@
 ---
 import logo from './logo-circle.png';
-import CtaButton from '../CtaButton.astro';
+import CtaButton, { type CtaButtonTypes } from '../CtaButton.astro';
+import MobileMenu from './mobile.astro';
+
+export type MenuItem = {
+  type: CtaButtonTypes;
+  label: string;
+  pathname: string;
+  newWindow?: boolean;
+}
+
+export const menuItems: MenuItem[] = [{
+  type: "ghost",
+  label: "platform",
+  pathname: "/#how-it-works"
+}, {
+  type: "ghost",
+  label: "news",
+  pathname: "/news"
+}, {
+  type: "ghost",
+  label: "contact",
+  pathname: "mailto:help@plyaz.co.uk",
+}, {
+  type: "primary",
+  label: "Join Us",
+  pathname: "https://community.plyaz.co.uk/",
+  newWindow: true
+}];
 ---
-<nav class="max-w-[800px] h-[80px] m-auto bg-tertiary/20 rounded-full my-10 drop-shadow-xl">
+
+<nav class="hidden md:block max-w-[800px] h-[80px] m-auto bg-tertiary/20 rounded-full my-10 drop-shadow-xl">
   <ul class="font-primary font-medium text-primary-foreground inline-flex flex-row text-base uppercase mx-3 gap-0 md:gap-5 align items-center h-full">
     <li class="flex">
       <a class="inline-block w-[56px] h-[56px]" href="/">
         <img class="w-auto" src={logo.src} alt="plyaz logo">
       </a>
     </li>
-    <li>
-      <CtaButton
-        type="ghost"
-        label="platform"
-        pathname="/#how-it-works"
-      />
-    </li>
-    <li>
-      <CtaButton
-        type="ghost"
-        label="news"
-        pathname="/news"
-      />
-    </li>
-    <li>
-      <CtaButton
-        type="ghost"
-        label="contact"
-        pathname="mailto:help@plyaz.co.uk"
-      />
-    </li>
-    <li class="flex">
-      <CtaButton 
-        label="Join Us" 
-        type="primary" 
-        pathname="https://community.plyaz.co.uk/"
-        newWindow={true}
-      />
-    </li>
+    {
+      menuItems.map(menuItem => (
+        <li>
+          <CtaButton
+            type={menuItem.type}
+            label={menuItem.label}
+            pathname={menuItem.pathname}
+          />
+        </li>
+      ))
+    }
   </ul>
 </nav>
+
+<div class="block md:hidden">
+  <MobileMenu menuItems={menuItems} />
+</div>
