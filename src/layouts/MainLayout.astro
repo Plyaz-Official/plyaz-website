@@ -11,7 +11,11 @@ const siteTitle = pageTitle ? `Plyaz | ${pageTitle}` : 'Plyaz';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<!-- Basic favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- Fallbacks -->
+		<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+		<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{siteTitle}</title>
