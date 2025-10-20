@@ -11,7 +11,7 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<div class="p-10 xl:pb-50 pb-24">
+<div class="p-0 md:p-10 xl:pb-50 pb-24">
   <div data-name="blog-header" class="w-full pb-10">
     <h2>
       <span class="font-semibold text-6xl tracking-[-0.1rem] pr-2">Our</span>
@@ -20,7 +20,7 @@ const { items } = Astro.props;
     </h2>
     <p class="text-lg mt-2 text-secondary-foreground">Discover the latest trends, insights, and news in sports investment and athlete empowerment.</p>
   </div>
-  <div data-name="card-grids" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+  <div data-name="card-grids" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-4">
     {
       items.map((post) =>
         <a href={`/news/${post.id}`}>
