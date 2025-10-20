@@ -175,3 +175,24 @@
     font-size: 14px;
   }
 }
+
+html {
+  background: var(--color-secondary);
+}
+
+body {
+  background: var(--color-white);
+}
+
+[data-name="wrapper"] {
+  &::before {
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    position: fixed;
+    z-index: -2;
+    background: var(--color-white);
+  }
+}
