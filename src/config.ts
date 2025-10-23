@@ -28,7 +28,7 @@ export const texts: Texts = {
         topTitle: 'From sign-up to',
         bottomTitle: 'Spotlight',
         description: 'FA-aligned. Secure. Transparent. Trusted.',
-        ctaLabel: 'read the doc',
+        ctaLabel: 'Learn more',
         pathname: 'https://plyaz.gitbook.io/plyaz_25/',
         newWindow: true
       }, {
