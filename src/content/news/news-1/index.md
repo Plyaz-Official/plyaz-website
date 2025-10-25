@@ -43,7 +43,7 @@ By leveraging insights from studies like this, Plyaz is redefining the future of
 Whether you’re an athlete, fan, scout, or investor, Plyaz invites you to be part of this revolution. Together, we can bridge the gap between aspiration and achievement—and empower the next generation of sports stars.
 
 ## Learn more?
-1. 🔗 Learn more about Plyaz and how you can get involved: [**plyaz.net**](https://plyaz.net/en)
+1. 🔗 Learn more about Plyaz and how you can get involved: [**plyaz.net**](https://plyaz.net)
 
 2. #SportsRevolution #AthleteEmpowerment #FutureOfSports #Plyaz
 
