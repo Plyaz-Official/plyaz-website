@@ -217,11 +217,11 @@ Material changes will be communicated to users via email or in-platform notice.
 
 **Data Controller:**
 PLYAZ Ltd
-Registered Office: [Registered Office Address]
+Registered Office: 71-75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ
 
-Registered in England and Wales – Company No. [00000000]
+Registered in England and Wales – Company No. 14963617
 
-📧 Email: <privacy@plyaz.net>
+📧 Email: <help@plyaz.co.uk>
 
 🌐 Website: <https://plyaz.net>
 
