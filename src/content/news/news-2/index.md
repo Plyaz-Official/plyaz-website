@@ -6,7 +6,7 @@ poster: "poster.jpg"
 tags: ["blog", "web 3"]
 ---
 
-## The Visa Lottery System
+## The visa lottery system
 
 Talent is globally distributed, but opportunity isn't. A gifted athlete from Sub-Saharan Africa faces bureaucratic obstacles that would challenge Fortune 500 executives. P-1A visa processing takes 3-6 months standard, with premium processing costing $2,805 for 15-day guarantee. Filing fees range from $460-$2,580 depending on visa type.
 
@@ -14,19 +14,19 @@ These aren't just administrative hurdles - they're career killers. Training cycl
 
 Sub-Saharan Africa represents 13% of global population but only 6% of Olympic athletes.
 
-## The Geography of Athletic Success
+## The geography of athletic success
 
 Research reveals optimal population sizes for athletic development: communities of 50,000-99,999 produce disproportionate numbers of professional athletes. Australia exemplifies efficient systems, producing 1 medal per 570,000 citizens compared to the USA's 1 medal per 3.5 million citizens.
 
 But success isn't just about population efficiency - it's about systematic support. The IOC generated $7.6 billion in the 2017-2021 cycle, with Olympic Solidarity budget increasing from $590 million (2021-2024) to $650 million (2025-2028). Yet funding distribution remains uneven.
 
-## Breakthrough Success Stories
+## Breakthrough success stories
 
 The Refugee Olympic Team grew from 10 athletes (2016) to 37 athletes (2024), demonstrating potential when barriers are removed. Paris 2024 saw 75 medals won by Olympic Solidarity scholarship holders, while South Sudan - the world's youngest nation - fielded its first Olympic team.
 
 These successes prove talent exists globally; systematic support makes the difference.
 
-## Technology as the Great Equalizer
+## Technology as the great equalizer
 
 Blockchain technology could revolutionize international talent development by:
 
@@ -38,7 +38,7 @@ Blockchain technology could revolutionize international talent development by:
 
 A promising athlete in Kenya could receive micro-investments from supporters worldwide, tracked transparently on blockchain, with automated payments based on verifiable performance metrics.
 
-## Market Opportunity Analysis
+## Market opportunity analysis
 
 Olympic Solidarity reached 195 NOCs for Paris 2024, indicating global infrastructure for talent identification exists. The challenge is sustainable funding mechanisms that don't depend solely on government or IOC resources.
 
@@ -49,7 +49,7 @@ Web3 technology enables new models:
 - Transparent impact tracking
 - Community-driven athlete support
 
-## Quick Intelligence
+## Quick intelligence
 
 - Global Inequality : Sub-Saharan Africa 13% of population, 6% of Olympic athletes
 - Bureaucratic Barriers : P-1A visas cost up to $2,805 with 3-6 month processing
@@ -57,7 +57,7 @@ Web3 technology enables new models:
 - Growing Success : Transparent impact tracking
 - Infrastructure Exists : Olympic Solidarity supports 195 NOCs globally
 
-## Professional Development: International Talent Evaluation
+## Professional development: International talent evaluation
 
 Scouts and agents operating internationally need understanding of visa processes, cultural considerations, and funding mechanisms. 
 The ability to identify talent in underserved markets and navigate international development pathways creates competitive advantages.
