@@ -19,6 +19,15 @@ const siteTitle = pageTitle ? `Plyaz | ${pageTitle}` : 'Plyaz';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{siteTitle}</title>
+		<script async defer src='https://app.visitortracking.com/assets/js/tracer.js'></script>
+		<script>
+			function init_tracer() {
+				var tracer = new Tracer({
+				websiteId : "undefined",
+				async : true,
+				debug : false });
+			}
+ 		</script>
 	</head>
 	<body class="text-primary-foreground font-primary">
 		<div data-name="wrapper" class="w-full max-w-[1350px] m-auto flex flex-col pr-5 pl-5 md:pr-10 md:pl-10 lg:p-0">
