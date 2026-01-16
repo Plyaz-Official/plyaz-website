@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from "../../layouts/MainLayout.astro";
+import Insights from "../../components/PostGrid/index.astro";
+
+const pageTitle = "Insights";
+
+const allPosts = await getCollection('insights');
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <Insights items={allPosts} />
+</MainLayout>

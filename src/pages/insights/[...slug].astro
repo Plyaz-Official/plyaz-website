@@ -5,7 +5,7 @@ import chevionLeft from "./chevron-left.png";
 import Tag from "../../components/Tag.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("news");
+  const posts = await getCollection("insights");
 
   return posts.map((post) => ({
     params: { id: post.id, slug: post.id },

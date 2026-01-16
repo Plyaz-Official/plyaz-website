@@ -13,8 +13,8 @@ const legal = defineCollection({
   }) 
 });
 
-const news = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/news" }),
+const insights = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/insights" }),
   schema: (args) =>
     z.object({
       title: z.string(),
@@ -28,5 +28,5 @@ const news = defineCollection({
 
 export const collections = {
   legal,
-  news,
+  insights,
 };

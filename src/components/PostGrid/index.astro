@@ -2,7 +2,7 @@
 import PostCard from '../PostCard/index.astro';
 import type { CollectionEntry } from 'astro:content';
 
-type NewsItem = CollectionEntry<'news'>;
+type NewsItem = CollectionEntry<'insights'>;
 
 interface Props {
   items: NewsItem[];
@@ -23,7 +23,7 @@ const { items } = Astro.props;
   <div data-name="card-grids" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-4">
     {
       items.map((post) =>
-        <a href={`/news/${post.id}`}>
+        <a href={`/insights/${post.id}`}>
           <PostCard 
             title={post.data.title}
             author={post.data.author}
