@@ -6,7 +6,7 @@ description: >-
   After release, many players enter a cycle of trials and rejection. Without
   structure, confidence drops and momentum fades. PLYAZ supports players through
   that phase by keeping them visible, accountable, and moving.
-poster: ./poster.png
+poster: poster.png
 tags:
   - Athlete Opportunity, Football Systems, Player Care, Athlete Development
 ---
