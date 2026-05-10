@@ -31,13 +31,13 @@ const resizedPosterImage = await getImage({ src: poster, width: 500 });
         <h2 class="text-3xl font-semibold">{title}</h2>
         <p class="text-lg text-accent-foreground">by {author}</p>
       </div>  
-      <p class="text-lg">{description}</p>
+      <p class="text-lg line-clamp-2 overflow-hidden text-ellipsis">{description}</p>
     </div>
-    <div data-name="tags" class="flex flex-row gap-2">
+    <div data-name="tags" class="flex flex-row flex-wrap gap-2">
       {
         Array.isArray(tags)
         && tags.length > 0
-        && tags.map(tag => (
+        && tags.slice(0, 3).map(tag => (
           <Tag value={tag} />
         ))
       }
