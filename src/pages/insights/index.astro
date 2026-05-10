@@ -7,10 +7,7 @@ import Insights from "../../components/PostGrid/index.astro";
 const pageTitle = "Insights";
 
 const allPosts = await getCollection('insights');
-const publishedPosts = allPosts.filter(post => {
-  if (!post.data.publishDate) return true;
-  return new Date(post.data.publishDate) <= new Date();
-});
+const publishedPosts = allPosts;
 ---
 
 <MainLayout pageTitle={pageTitle}>

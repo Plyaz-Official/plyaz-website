@@ -103,13 +103,19 @@ const config = config$1({
           description: "Pick a future date and time to schedule this post.",
           defaultValue: { kind: "now" }
         }),
-        author: fields.text({ label: "Author" }),
-        description: fields.text({ label: "Description", multiline: true }),
+        author: fields.text({
+          label: "Author",
+          validation: { length: { min: 1 } }
+        }),
+        description: fields.text({
+          label: "Description",
+          multiline: true,
+          validation: { length: { min: 1 } }
+        }),
         poster: fields.image({
           label: "Poster Image",
-          // Storing image in the same directory as the markdown file
-          directory: "src/content/insights/*/",
-          publicPath: ""
+          publicPath: "./",
+          validation: { isRequired: true }
         }),
         tags: fields.array(fields.text({ label: "Tag" }), {
           label: "Tags",
