@@ -1,11 +1,8 @@
 import { config, fields, collection } from '@keystatic/core';
 
 export default config({
-  storage: process.env.NODE_ENV === 'development' ? {
+  storage: {
     kind: 'local',
-  } : {
-    kind: 'github',
-    repo: 'Plyaz-Official/plyaz-website'
   },
   collections: {
     insights: collection({

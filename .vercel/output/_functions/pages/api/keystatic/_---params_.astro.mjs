@@ -87,8 +87,11 @@ function tryOrUndefined(fn) {
 }
 
 const config = config$1({
-  storage: {
+  storage: process.env.NODE_ENV === "development" ? {
     kind: "local"
+  } : {
+    kind: "github",
+    repo: "Plyaz-Official/plyaz-website"
   },
   collections: {
     insights: collection({

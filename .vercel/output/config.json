@@ -24,14 +24,6 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^/insights/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/insights(?:/(.*?))?/?$",
-			"dest": "_render"
-		},
-		{
 			"src": "^/keystatic(?:/(.*?))?/?$",
 			"dest": "_render"
 		}
