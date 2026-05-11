@@ -3,6 +3,7 @@ title: "The opportunity gap: Why ability alone is no longer enough in modern foo
 author: 'Oliver Downward'
 description: 'Football has long told a simple story....'
 poster: 'poster.theOpportunityGap.jpg'
+publishDate: 2026-05-05T10:00:00Z
 tags: ['Opportunity', 'Football Systems', 'Player Care']
 ---
 

@@ -3,6 +3,7 @@ title: "Why football’s funding models miss the players Who need them most"
 author: 'Oliver Downward'
 description: 'Football does not suffer from a lack of investment.'
 poster: 'poster.whyFootballFundingMisses.png'
+publishDate: 2026-05-04T10:00:00Z
 tags: ['Opportunity', 'Football Systems', 'Player Care']
 ---
 

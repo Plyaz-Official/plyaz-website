@@ -5,7 +5,7 @@ author: Oliver Downward
 description: >-
   After release, many players enter a cycle of trials and rejection. Without
   structure, confidence drops and momentum fades......
-poster: ./after-release-structure-decides-what-happens-next/poster.png
+poster: poster.png
 tags:
   - Athlete Opportunity
   - Football Systems

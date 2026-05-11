@@ -3,6 +3,7 @@ title: "Why football loses so much talent before it ever reaches the game"
 author: 'Oliver Downward'
 description: 'Every year, thousands of young footballers leave...'
 poster: 'poster.WhyFootballLoses.jpg'
+publishDate: 2026-05-03T10:00:00Z
 tags: ['blog', 'Football Systems', 'Player Care']
 ---
 

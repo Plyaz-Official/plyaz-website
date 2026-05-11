@@ -23,6 +23,7 @@ const insights = defineCollection({
       tags: z.array(z.string()),
       // https://docs.astro.build/en/guides/images/#images-in-content-collections
       poster: args.image(),
+      publishDate: z.date().optional(),
     }),
 });
 

@@ -3,6 +3,7 @@ title: "Why geography determines athletic dreams more than talent"
 author: "iansilva@plyaz.co.uk"
 description: "Talent is globally distributed, but opportunity isn't"
 poster: "poster.jpg"
+publishDate: 2026-05-07T10:00:00Z
 tags: ["blog", "web 3"]
 ---
 

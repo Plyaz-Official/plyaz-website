@@ -3,6 +3,7 @@ title: "We're building a platform to fund football comebacks. Here's why"
 author: 'iansilva@plyaz.co.uk'
 description: 'The stat that won’t leave me alone...'
 poster: 'poster.jpg'
+publishDate: 2026-05-08T10:00:00Z
 tags: ['blog', 'about']
 ---
 

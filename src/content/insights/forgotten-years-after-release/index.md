@@ -3,6 +3,7 @@ title: "The forgotten years: What happens to players after they’re released"
 author: 'Oliver Downward'
 description: 'For most young footballers, the moment of....'
 poster: 'poster.forgottenyears.jpg'
+publishDate: 2026-05-09T10:00:00Z
 tags: ['Opportunity', 'Football Systems', 'Player Care']
 ---
 
