@@ -5,7 +5,7 @@ author: Oliver Downward
 description: >-
   Agents regularly see young players sent into repeated trials with little
   structure....
-poster: ./agents-see-the-same-gap-after-release/poster.png
+poster: poster.png
 tags:
   - agents
   - football
