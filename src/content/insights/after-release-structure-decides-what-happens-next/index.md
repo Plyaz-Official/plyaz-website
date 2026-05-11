@@ -4,11 +4,12 @@ publishDate: 2026-05-10T19:05:00.000Z
 author: Oliver Downward
 description: >-
   After release, many players enter a cycle of trials and rejection. Without
-  structure, confidence drops and momentum fades. PLYAZ supports players through
-  that phase by keeping them visible, accountable, and moving.
-poster: poster.png
+  structure, confidence drops and momentum fades......
+poster: ./after-release-structure-decides-what-happens-next/poster.png
 tags:
-  - Athlete Opportunity, Football Systems, Player Care, Athlete Development
+  - Athlete Opportunity
+  - Football Systems
+  - Player Care
 ---
 ## **After Release, Structure Decides What Happens Next**
 
