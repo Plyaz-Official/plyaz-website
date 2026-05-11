@@ -28,7 +28,7 @@ export default config({
         }),
         poster: fields.image({
           label: 'Poster Image',
-          publicPath: './',
+          publicPath: '',
           validation: { isRequired: true }
         }),
         tags: fields.array(fields.text({ label: 'Tag' }), {
