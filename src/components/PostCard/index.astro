@@ -26,18 +26,18 @@ const resizedPosterImage = await getImage({ src: poster, width: 500 });
 <div data-name="news-card" class="flex flex-col w-full h-auto gap-2">
   <div data-name="poster" class="w-full h-auto bg-amber-100 bg-cover aspect-video" style={{ backgroundImage: `url(${resizedPosterImage.src})`}}></div>
   <div data-name="card-contents" class="h-auto flex flex-col gap-4">
-    <div data-name="news-title" class="flex flex-col">
+    <div data-name="news-title" class="flex flex-col gap-3">
       <div class="flex flex-col gap-1">
         <h2 class="text-3xl font-semibold">{title}</h2>
         <p class="text-lg text-accent-foreground">by {author}</p>
       </div>  
-      <p class="text-lg line-clamp-2 overflow-hidden text-ellipsis">{description}</p>
+      <p class="text-lg overflow-hidden text-ellipsis" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{description}</p>
     </div>
     <div data-name="tags" class="flex flex-row flex-wrap gap-2">
       {
         Array.isArray(tags)
         && tags.length > 0
-        && tags.slice(0, 3).map(tag => (
+        && tags.flatMap(t => t.split(',').map(s => s.trim())).slice(0, 3).map(tag => (
           <Tag value={tag} />
         ))
       }
