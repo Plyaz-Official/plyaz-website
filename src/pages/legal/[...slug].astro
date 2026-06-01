@@ -1,29 +1,33 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import { getCollection, render } from "astro:content";
-import LegalDocument from '../../components/LegalDocument/index.astro';
+/**
+ * /legal/[slug] → redirect to {PUBLIC_WEBAPP_BASE_URL}/legal/[slug]
+ *
+ * Legal content (terms / privacy / cookie / community-guidelines)
+ * lives in Strapi CMS under `ContentPage` documents with
+ * `section: legal`. The webapp renders them at `/legal/[slug]` with
+ * the same path shape used here, so a 1:1 slug redirect works
+ * without a remap table.
+ *
+ * `getStaticPaths` enumerates the local legal collection so each
+ * known slug becomes a true HTTP 301 at the Vercel edge, instead of
+ * crawlers hitting the parametric route and 404-ing. Local markdown
+ * files in `src/content/legal/` stay as source-of-truth for the prod
+ * CMS seed script (phase 3 of FEAT #809).
+ *
+ * Falls back to https://web.plyaz.net when `PUBLIC_WEBAPP_BASE_URL`
+ * is unset.
+ */
+import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection("legal");
-
+  const posts = await getCollection('legal');
   return posts.map((post) => ({
-    params: { id: post.id, slug: post.id },
-    props: { post },
+    params: { slug: post.id },
+    props: { slug: post.id },
   }));
 }
 
-const { post } = Astro.props;
-const { Content } = await render(post);
+const { slug } = Astro.props as { slug: string };
+const BASE = import.meta.env.PUBLIC_WEBAPP_BASE_URL ?? 'https://web.plyaz.net';
+return Astro.redirect(`${BASE}/legal/${slug}`, 301);
 ---
-
-<MainLayout>
-  <LegalDocument
-    title={post.data.title}
-    lastUpdated={post.data.lastUpdated}
-  >
-    <Content />
-  </LegalDocument>
-</MainLayout>
-
-
-
