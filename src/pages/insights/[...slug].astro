@@ -1,13 +1,26 @@
 ---
 /**
- * /insights/[...slug] → 308 https://web.plyaz.net/en/blog/[...slug]
+ * /insights/[...slug] → https://web.plyaz.net/en/blog/[...slug]
  *
- * SSR endpoint — same rationale as `insights/index.astro`. With
- * `prerender = false` the route resolves at request time, so no
- * `getStaticPaths` is needed (which is what blocked moving these
- * rules into Astro's top-level `redirects` config earlier).
+ * Plain static page with meta-refresh + JS fallback. `prerender =
+ * false` keeps it as an SSR endpoint so any slug works without
+ * getStaticPaths enumeration — the function just builds the
+ * destination URL on the fly and renders the redirect shim.
  */
 export const prerender = false;
 const slug = Astro.params.slug ?? '';
-return Astro.redirect(`https://web.plyaz.net/en/blog/${slug}`, 308);
+const DEST = `https://web.plyaz.net/en/blog/${slug}`;
 ---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${DEST}`} />
+    <link rel="canonical" href={DEST} />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={DEST}>{DEST}</a>…</p>
+    <script set:html={`window.location.replace(${JSON.stringify(DEST)});`} />
+  </body>
+</html>

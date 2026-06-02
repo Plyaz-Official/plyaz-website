@@ -1,14 +1,24 @@
 ---
 /**
- * /legal/[...slug] → 308 https://web.plyaz.net/en/legal/[...slug]
+ * /legal/[...slug] → https://web.plyaz.net/en/legal/[...slug]
  *
- * SSR endpoint via `prerender = false`. Same rationale as the
- * `insights/[...slug]` redirect: vercel.json is ignored under the
- * @astrojs/vercel Build Output API, Astro's `redirects` config
- * doesn't accept `[...slug]` sources, so the only path that gives
- * us real edge 308s is a serverless function returning a Response.
+ * Plain static page with meta-refresh + JS fallback. Same shape as
+ * `insights/[...slug]`.
  */
 export const prerender = false;
 const slug = Astro.params.slug ?? '';
-return Astro.redirect(`https://web.plyaz.net/en/legal/${slug}`, 308);
+const DEST = `https://web.plyaz.net/en/legal/${slug}`;
 ---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${DEST}`} />
+    <link rel="canonical" href={DEST} />
+    <title>Redirecting…</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={DEST}>{DEST}</a>…</p>
+    <script set:html={`window.location.replace(${JSON.stringify(DEST)});`} />
+  </body>
+</html>
