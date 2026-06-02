@@ -1,0 +1,23 @@
+---
+/**
+ * /insights → 308 https://web.plyaz.net/en/blog
+ *
+ * Hard SSR endpoint (`prerender = false`) — Astro builds this as a
+ * Vercel serverless function instead of a static HTML page. The
+ * function returns a real HTTP 308 with a Location header, so the
+ * browser performs the redirect instantly at the edge instead of
+ * loading a meta-refresh shim.
+ *
+ * Why not vercel.json: Vercel ignores root vercel.json redirects
+ * when the framework uses the Build Output API (the @astrojs/vercel
+ * adapter does). Probe confirmed: a sentinel rule in vercel.json
+ * still 404s on prod. The adapter's own redirect map doesn't accept
+ * `[...slug]` sources (build fails on GetStaticPathsRequired), so
+ * SSR pages are the only path that produces real edge 308s.
+ *
+ * Locale prefix `/en/` is baked in so the browser never hops through
+ * the webapp's `/blog` → `/en/blog` 307.
+ */
+export const prerender = false;
+return Astro.redirect('https://web.plyaz.net/en/blog', 308);
+---

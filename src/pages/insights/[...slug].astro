@@ -1,0 +1,13 @@
+---
+/**
+ * /insights/[...slug] → 308 https://web.plyaz.net/en/blog/[...slug]
+ *
+ * SSR endpoint — same rationale as `insights/index.astro`. With
+ * `prerender = false` the route resolves at request time, so no
+ * `getStaticPaths` is needed (which is what blocked moving these
+ * rules into Astro's top-level `redirects` config earlier).
+ */
+export const prerender = false;
+const slug = Astro.params.slug ?? '';
+return Astro.redirect(`https://web.plyaz.net/en/blog/${slug}`, 308);
+---

@@ -1,0 +1,14 @@
+---
+/**
+ * /legal/[...slug] → 308 https://web.plyaz.net/en/legal/[...slug]
+ *
+ * SSR endpoint via `prerender = false`. Same rationale as the
+ * `insights/[...slug]` redirect: vercel.json is ignored under the
+ * @astrojs/vercel Build Output API, Astro's `redirects` config
+ * doesn't accept `[...slug]` sources, so the only path that gives
+ * us real edge 308s is a serverless function returning a Response.
+ */
+export const prerender = false;
+const slug = Astro.params.slug ?? '';
+return Astro.redirect(`https://web.plyaz.net/en/legal/${slug}`, 308);
+---
