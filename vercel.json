@@ -2,13 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/__redirect-test",
+      "destination": "https://example.com",
+      "permanent": false
+    },
+    {
       "source": "/insights",
       "destination": "https://web.plyaz.net/en/blog",
       "permanent": true
     },
     {
-      "source": "/insights/:slug*",
-      "destination": "https://web.plyaz.net/en/blog/:slug*",
+      "source": "/insights/(.*)",
+      "destination": "https://web.plyaz.net/en/blog/$1",
       "permanent": true
     },
     {
@@ -17,8 +22,8 @@
       "permanent": true
     },
     {
-      "source": "/legal/:slug*",
-      "destination": "https://web.plyaz.net/en/legal/:slug*",
+      "source": "/legal/(.*)",
+      "destination": "https://web.plyaz.net/en/legal/$1",
       "permanent": true
     }
   ]
