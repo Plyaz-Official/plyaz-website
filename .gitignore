@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Vercel adapter build artefacts — these MUST NOT be tracked.
+# When committed, Vercel reads them as prebuilt Build Output and SKIPS the actual build,
+# silently deploying stale output that doesn't reflect source changes.
+.vercel/
