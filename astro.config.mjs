@@ -25,3 +25,4 @@ export default defineConfig({
     plugins: [tailwindcss()]
   }
 });
+// Force Vercel to invalidate any cached build output (20260602-024244)
